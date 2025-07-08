@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Policy — Knotivira</title>
+    <style>
+        /* General Styles - Lighter Theme */
+        body {
+            font-family: 'Montserrat', sans-serif; /* A more modern, elegant font */
+            margin: 0;
+            padding: 0;
+            color: #333; /* Softer dark text */
+            background-color: #F8F8F8; /* Light gray for background */
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1000px; /* Slightly narrower for policy text readability */
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: #FFFFFF; /* Pure white */
+            padding: 15px 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08); /* Lighter shadow */
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif; /* Elegant font for logo */
+            font-size: 2.2em;
+            font-weight: bold;
+            color: #7A9B76; /* Softer Green */
+            text-decoration: none;
+            flex-shrink: 0;
+            margin-right: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #555; /* Slightly lighter text for nav */
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #CEB1A1; /* Softer Rose Gold */
+        }
+
+        /* Policy Content Styling */
+        section {
+            padding: 60px 0;
+            background-color: #F8F8F8;
+        }
+
+        section:nth-of-type(even) {
+            background-color: #FFFFFF;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5em;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #7A9B76;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+            color: #CEB1A1;
+            margin-top: 50px;
+            margin-bottom: 25px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8em;
+            color: #7A9B76;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        p {
+            margin-bottom: 1.2em;
+            line-height: 1.7;
+            font-size: 1.05em;
+            color: #444;
+        }
+
+        ul {
+            list-style: disc;
+            margin-left: 25px;
+            margin-bottom: 1.5em;
+            color: #444;
+        }
+
+        ul li {
+            margin-bottom: 0.8em;
+            line-height: 1.6;
+        }
+
+        strong {
+            color: #333;
+        }
+
+        a {
+            color: #CEB1A1;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #7A9B76;
+        }
+
+        /* Cookie Consent Dialogue Box */
+        .cookie-consent-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #4A4A4A; /* Darker Gray from footer */
+            color: #E0E0E0;
+            padding: 20px;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+        }
+
+        .cookie-consent-banner p {
+            margin-bottom: 15px;
+            font-size: 0.95em;
+            line-height: 1.5;
+            color: #E0E0E0;
+            max-width: 800px;
+        }
+
+        .cookie-consent-banner .button-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .cookie-consent-banner button {
+            background-color: #7A9B76; /* Softer Green */
+            color: #fff;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 4px;
+            font-size: 0.9em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .cookie-consent-banner button:hover {
+            background-color: #CEB1A1; /* Softer Rose Gold */
+            transform: translateY(-2px);
+        }
+
+        .cookie-consent-banner .decline-button {
+            background-color: #CEB1A1; /* Softer Rose Gold */
+        }
+
+        .cookie-consent-banner .decline-button:hover {
+            background-color: #7A9B76; /* Softer Green */
+        }
+
+        /* Footer */
+        footer {
+            background-color: #4A4A4A; /* Darker Gray */
+            color: #E0E0E0; /* Lighter text for footer */
+            padding: 50px 0;
+            text-align: center;
+            font-size: 0.85em;
+        }
+
+        footer .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        footer nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 25px 0;
+        }
+
+        footer nav ul li {
+            margin: 0 18px;
+        }
+
+        footer nav ul li a {
+            color: #E0E0E0;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer nav ul li a:hover {
+            color: #CEB1A1; /* Softer Rose Gold */
+        }
+
+        .footer-address {
+            margin-top: 25px;
+            margin-bottom: 30px;
+            line-height: 1.8;
+            color: #C0C0C0;
+        }
+
+        .disclaimer-text { /* Reusing this class for general footer text */
+            max-width: 900px;
+            margin: 0 auto 30px auto;
+            font-size: 0.8em;
+            line-height: 1.6;
+            color: #A0A0A0;
+            text-align: center; /* Center this text */
+            padding: 0; /* Remove padding if not a specific block */
+            background-color: transparent; /* Ensure transparent background */
+            border-radius: 0; /* Remove border-radius */
+        }
+
+        .disclaimer-text h3 {
+            color: #CEB1A1; /* Softer Rose Gold */
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul {
+                margin-top: 15px;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 8px 0;
+            }
+
+            h1 {
+                font-size: 2.5em;
+            }
+
+            h2 {
+                font-size: 2em;
+            }
+
+            h3 {
+                font-size: 1.5em;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            .cookie-consent-banner {
+                padding: 15px;
+                flex-direction: column;
+            }
+
+            .cookie-consent-banner .button-group {
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+            }
+
+            .cookie-consent-banner button {
+                width: 80%; /* Make buttons wider on small screens */
+                margin: 0 auto;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">Knotivira</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="container">
+                <h1>Knotivira Cookie Policy</h1>
+                <p><strong>Last Updated: July 5, 2025</strong></p>
+                <p>Welcome to Knotivira.com ("Site"). This Cookie Policy explains how Knotivira ("we," "our," or "us") uses cookies and similar tracking technologies on our website. This policy provides comprehensive details about what cookies are, the types of cookies we use, the purposes for which we use them, and how you can manage your cookie preferences. Your privacy is of utmost importance to us, and we are committed to being transparent about our data collection practices. By continuing to browse and use our Site, you consent to our use of cookies in accordance with this Cookie Policy. If you do not agree to the use of cookies, please adjust your browser settings or refrain from using our Site as described herein.</p>
+                <p>This Cookie Policy should be read in conjunction with our <a href="privacy.html">Privacy Policy</a>, which provides more extensive information about how we collect, use, and protect your personal data. We may update this Cookie Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. We encourage you to review this policy periodically to stay informed about our use of cookies.</p>
+
+                <h2>1. What Are Cookies?</h2>
+                <p>Cookies are small text files that are placed on your computer or mobile device when you visit a website. They are widely used by website owners to make their websites work, or to work more efficiently, as well as to provide reporting information. Cookies can be "persistent" or "session" cookies. Persistent cookies remain on your personal computer or mobile device when you go offline, while session cookies are deleted as soon as you close your web browser. The primary function of cookies is to enable a website to remember your actions and preferences over a period of time, so you don't have to keep re-entering them whenever you come back to the site or browse from one page to another.</p>
+                <p>Beyond simple memory functions, cookies serve a multitude of purposes. They can be used to track your browsing behavior, remember your login details, store items in your shopping cart, personalize content, and deliver targeted advertisements. They play a crucial role in enhancing user experience by making interactions with websites faster and more convenient. Without cookies, websites would treat you as a completely new visitor every time you navigate to a new page, making tasks like online shopping or logging into an account cumbersome and inefficient. The data stored within cookies is typically anonymous or pseudonymized, meaning it doesn't directly identify you unless combined with other information you've provided.</p>
+                <p>The information stored in cookies can include the date and time of your visit, the pages viewed, the time spent on the site, and the websites visited just before and just after our Site. This data helps us understand user behavior patterns, identify popular content, and diagnose technical issues, all contributing to the continuous improvement of our services. It's important to understand that cookies themselves do not contain personal information like your name or email address directly, unless you have explicitly provided that information to the website. Instead, they often contain a unique identifier that allows the website to recognize your browser on subsequent visits.</p>
+                <p>Cookies are a fundamental technology in modern web browsing. They enable a personalized and efficient online experience by allowing websites to "remember" information about you. This can range from simple preferences, like your language choice, to more complex data, such as the contents of your shopping cart across multiple browsing sessions. The data stored in cookies is typically small in size and does not directly execute code or carry viruses. They are simply data files that facilitate communication between your browser and the website's server. Understanding how cookies function is key to managing your online privacy effectively.</p>
+                <p>The lifespan of a cookie varies. Session cookies are temporary and are erased when you close your browser. Persistent cookies, on the other hand, remain on your device for a set period, which can range from a few minutes to several years, or until you manually delete them. These longer-lasting cookies are often used for remembering login details, tracking preferences across visits, or for advertising purposes. The ability of websites to set and read cookies is governed by your browser settings and, increasingly, by privacy regulations that require explicit user consent for certain types of cookies.</p>
+
+                <h2>2. Types of Cookies We Use and Their Purposes</h2>
+                <p>Knotivira uses various types of cookies for different purposes to ensure the optimal functioning of our Site and to enhance your overall experience. Understanding these categories will help you make informed decisions about your cookie preferences.</p>
+
+                <h3>2.1. Strictly Necessary Cookies (Essential Cookies)</h3>
+                <p>These cookies are absolutely essential for the Site to function properly and securely. Without these cookies, certain services you have asked for cannot be provided, and the Site may not operate as intended. They are usually only set in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in, or filling in forms. These cookies do not store any personally identifiable information. Because they are fundamental to the operation of the Site, they cannot be switched off in our systems. If you block these cookies through your browser settings, some parts of the Site will not work or will not work correctly.</p>
+                <ul>
+                    <li><strong>Purpose:</strong> To enable core website functionality, security, and accessibility.</li>
+                    <li><strong>Examples:</strong>
+                        <ul>
+                            <li>Remembering items placed in your shopping cart across different pages or visits.</li>
+                            <li>Allowing you to log into secure areas of the Site and maintaining your session.</li>
+                            <li>Remembering your cookie consent preferences.</li>
+                            <li>Ensuring the security of your transactions and protecting against fraudulent activities.</li>
+                            <li>Load balancing to distribute website traffic efficiently.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Impact of Disabling:</strong> The Site will likely not function correctly, and you may be unable to complete purchases or access your account.</li>
+                </ul>
+                <p>These cookies are fundamental to providing a seamless and secure browsing experience. They are the backbone of any interactive website, ensuring that basic functionalities like user authentication and shopping cart management work without interruption. Their necessity means they are typically exempt from explicit consent requirements in many privacy regulations, as they are considered part of the "service requested by the user." However, we still inform you of their presence and purpose.</p>
+
+                <h3>2.2. Performance and Analytics Cookies</h3>
+                <p>These cookies collect information about how visitors use our Site, for instance, which pages visitors go to most often, and if they get error messages from web pages. These cookies do not collect information that directly identifies a visitor. All information these cookies collect is aggregated and therefore anonymous. They are used only to improve how a website works. By understanding how users interact with our Site, we can identify areas for improvement, optimize content, and enhance the overall user experience.</p>
+                <ul>
+                    <li><strong>Purpose:</strong> To measure and improve the performance of our Site, understand user behavior, and gather statistical data.</li>
+                    <li><strong>Examples:</strong>
+                        <ul>
+                            <li>Google Analytics cookies: Collect data on website traffic, page views, time spent on pages, and user demographics (anonymized).</li>
+                            <li>Identifying popular products, patterns, or content sections.</li>
+                            <li>Monitoring website loading speeds and identifying technical issues.</li>
+                            <li>Tracking the effectiveness of different design layouts or features.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Impact of Disabling:</strong> While the Site will remain functional, our ability to understand and improve its performance will be limited, potentially leading to a less optimized experience over time.</li>
+                </ul>
+                <p>These cookies are invaluable for data-driven decision-making. They help us continuously refine our Site to better serve your needs. For example, if analytics show that a particular page has a high bounce rate, we can investigate why and make improvements. This continuous feedback loop is vital for maintaining a high-quality online platform. We typically use third-party services for these analytics, and the data is processed in an aggregated and anonymized manner to protect your privacy.</p>
+
+                <h3>2.3. Functionality Cookies</h3>
+                <p>Functionality cookies allow our Site to remember choices you make (such as your username, language, or the region you are in) and provide enhanced, more personal features. For instance, they can remember changes you have made to text size, fonts, and other parts of web pages that you can customize. They may also be used to provide services you have asked for, such as watching a video or commenting on a blog. The information these cookies collect may be anonymized and they cannot track your browsing activity on other websites.</p>
+                <ul>
+                    <li><strong>Purpose:</strong> To enhance personalization and remember your preferences for a more convenient browsing experience.</li>
+                    <li><strong>Examples:</strong>
+                        <ul>
+                            <li>Remembering your login details for future visits (if you choose "remember me").</li>
+                            <li>Storing your preferred language or currency settings.</li>
+                            <li>Remembering items you've viewed recently.</li>
+                            <li>Enabling video playback or interactive features on the Site.</li>
+                            <li>Pre-filling forms with previously entered information.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Impact of Disabling:</strong> Your experience may be less personalized, and you may need to re-enter preferences or login details more frequently.</li>
+                </ul>
+                <p>These cookies aim to make your interaction with Knotivira more seamless and tailored to your individual preferences. By remembering your choices, they save you time and effort, contributing to a more enjoyable and efficient browsing session. For example, if you set a specific filter preference in our yarn atelier, a functionality cookie can remember that preference for your next visit, saving you the trouble of re-applying it.</p>
+
+                <h3>2.4. Targeting and Advertising Cookies</h3>
+                <p>These cookies are used to deliver advertisements more relevant to you and your interests. They are also used to limit the number of times you see an advertisement and help measure the effectiveness of advertising campaigns. They are usually placed by advertising networks with the website operator’s permission. They remember that you have visited a website and this information may be shared with other organizations such as advertisers. This means that after you have visited our Site, you may see advertisements about Knotivira on other websites, or advertisements about other products or services that may be of interest to you.</p>
+                <ul>
+                    <li><strong>Purpose:</strong> To deliver personalized advertisements and measure the effectiveness of marketing campaigns.</li>
+                    <li><strong>Examples:</strong>
+                        <ul>
+                            <li>Retargeting: Showing you ads for products you viewed on Knotivira after you leave our Site.</li>
+                            <li>Audience segmentation: Grouping users with similar interests to deliver relevant ads.</li>
+                            <li>Tracking ad impressions and clicks to measure campaign performance.</li>
+                            <li>Preventing you from seeing the same advertisement too many times.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Impact of Disabling:</strong> You will still see advertisements, but they may be less relevant to your interests.</li>
+                </ul>
+                <p>These cookies are crucial for our marketing efforts, allowing us to reach potential customers who are genuinely interested in fiber arts and our products. They help us make our advertising more efficient and less intrusive by showing you ads that are more likely to be relevant. We work with reputable advertising partners who adhere to industry standards for data privacy and security. Disabling these cookies does not mean you will no longer see ads; it simply means the ads you see will be less tailored to your browsing habits.</p>
+
+                <h3>2.5. Social Media Cookies</h3>
+                <p>These cookies are set by a range of social media services that we have added to the Site to enable you to share our content with your friends and networks. They are capable of tracking your browser across other sites and building up a profile of your interests. This may impact the content and messages you see on other websites you visit. If you do not allow these cookies, you may not be able to use or see these sharing tools.</p>
+                <ul>
+                    <li><strong>Purpose:</strong> To enable social media sharing features and track interactions for social media marketing.</li>
+                    <li><strong>Examples:</strong>
+                        <ul>
+                            <li>"Like" or "Share" buttons from Facebook, Instagram, Pinterest.</li>
+                            <li>Embedding social media feeds on our Site.</li>
+                            <li>Tracking user engagement with our content on social media platforms.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Impact of Disabling:</strong> You may not be able to share content directly from our Site to social media, and your social media experience may be less integrated.</li>
+                </ul>
+                <p>Social media cookies facilitate your connection with Knotivira on your preferred platforms. They allow for seamless sharing of our beautiful patterns and yarns, helping our community grow. While they do track your activity across sites, this is typically done by the social media platform itself, in accordance with their own privacy policies. We merely integrate their tools to enhance your sharing capabilities on our Site.</p>
+
+                <h3>2.6. First-Party vs. Third-Party Cookies</h3>
+                <ul>
+                    <li><strong>First-Party Cookies:</strong> These are cookies set by the website you are visiting (Knotivira.com). They are generally used to store your preferences, remember your login details, or manage your shopping cart. They are typically essential or functionality cookies.</li>
+                    <li><strong>Third-Party Cookies:</strong> These are cookies set by a domain other than the one you are visiting. This typically happens when the website incorporates elements from other sites, such as images, social media plugins, or advertising. Third-party cookies are often used for cross-site tracking, analytics, and advertising purposes. For example, Google Analytics cookies are third-party cookies.</li>
+                </ul>
+                <p>Understanding the distinction between first-party and third-party cookies is crucial for managing your privacy. First-party cookies are directly controlled by Knotivira and are primarily used to enhance your experience on our Site. Third-party cookies, while often beneficial for analytics and personalized advertising, are controlled by external entities, and their data usage is governed by those entities' privacy policies. We carefully select our third-party partners to ensure they adhere to high standards of data protection.</p>
+
+                <h3>2.7. Session vs. Persistent Cookies</h3>
+                <ul>
+                    <li><strong>Session Cookies:</strong> These are temporary cookies that remain on your device only for the duration of your browsing session. They are deleted automatically once you close your web browser. They are often used for essential functionalities like remembering items in your shopping cart during a single visit.</li>
+                    <li><strong>Persistent Cookies:</strong> These cookies remain on your device for a longer period, even after you close your browser. They have an expiration date set by the website (which can be minutes, days, or even years) or remain until you manually delete them. They are used to remember your preferences, login details, or for tracking purposes across multiple visits.</li>
+                </ul>
+                <p>The duration of a cookie impacts its purpose. Session cookies are ideal for short-term interactions, ensuring continuity within a single visit. Persistent cookies, on the other hand, are designed for long-term memory, enabling a more personalized and convenient experience over time, such as remembering your preferences or login status for future visits. Both types play a role in optimizing your interaction with Knotivira.</p>
+
+                <h3>2.8. Other Tracking Technologies</h3>
+                <p>In addition to cookies, we may use other similar technologies to collect information about your browsing activities. These include:</p>
+                <ul>
+                    <li><strong>Web Beacons (Pixel Tags or Clear GIFs):</strong> These are tiny graphics with a unique identifier, similar in function to cookies, and are used to track the online movements of web users. In contrast to cookies, which are stored on a user's computer hard drive, web beacons are embedded invisibly on web pages or in emails and are about the size of the period at the end of this sentence. They help us to understand if emails have been opened or if specific pages have been viewed.</li>
+                    <li><strong>Local Storage (HTML5 Local Storage):</strong> This technology allows websites to store larger amounts of data directly in the browser, similar to cookies but with greater capacity. It can be used to remember user preferences, offline data, or even user-generated content for a longer period.</li>
+                    <li><strong>Flash Cookies (Local Shared Objects):</strong> These are data files that can be created by sites that use Adobe Flash. They are similar to cookies in that they store information on your device to remember settings, preferences, or usage. However, they are managed through the Flash Player settings rather than directly through your browser.</li>
+                    <li><strong>Device Fingerprinting:</strong> This involves collecting information about your device's configuration (e.g., browser type, operating system, installed fonts, screen resolution) to create a unique "fingerprint" that can identify your device across different websites and sessions. This is a more advanced tracking method.</li>
+                </ul>
+                <p>These technologies serve similar purposes to cookies, primarily for analytics, personalization, and advertising. While they may not be managed through standard browser cookie settings, many browsers and privacy tools offer options to control or block these as well. We use these technologies to gain a more comprehensive understanding of how our Site is used and to deliver a consistent and relevant experience.</p>
+
+                <h2>3. How to Manage Your Cookie Preferences</h2>
+                <p>Knotivira respects your right to control your cookie preferences. You have several options to manage, accept, or decline cookies. Please note that disabling certain cookies may impact the functionality and your experience on our Site.</p>
+
+                <h3>3.1. Using Our Cookie Consent Tool</h3>
+                <p>Upon your first visit to Knotivira.com, you will be presented with a cookie consent banner at the bottom of the page. This tool allows you to:
+                    <ul>
+                        <li><strong>Accept All Cookies:</strong> Consent to the use of all types of cookies described in this policy.</li>
+                        <li><strong>Decline Non-Essential Cookies:</strong> Decline performance, functionality, advertising, and social media cookies, while allowing strictly necessary cookies to ensure basic site functionality.</li>
+                        <li><strong>Manage Preferences:</strong> Access a detailed preference center where you can individually select which categories of non-essential cookies you wish to allow or block.</li>
+                    </ul>
+                </p>
+                <p>You can revisit your cookie preferences at any time by clicking on the "Cookie Settings" link, typically found in the footer of our Site, or by clearing your browser's cookies and revisiting the Site.</p>
+                <p>Our cookie consent tool is designed to provide you with granular control over your data. We aim to make the process of managing your preferences as straightforward and transparent as possible. By using this tool, you can tailor your experience to your comfort level regarding data collection and personalization. We log your consent choices to ensure compliance with relevant data protection regulations and to respect your preferences on subsequent visits.</p>
+
+                <h3>3.2. Browser Settings</h3>
+                <p>Most web browsers allow you to control cookies through their settings. You can usually find these settings in the "Options" or "Preferences" menu of your browser. Here's a general guide for popular browsers:</p>
+                <ul>
+                    <li><strong>Google Chrome:</strong>
+                        <ul>
+                            <li>Open Chrome, click the three-dot menu icon in the top right corner.</li>
+                            <li>Go to "Settings" > "Privacy and security" > "Site Settings" > "Cookies and site data".</li>
+                            <li>Here you can block third-party cookies, clear cookies on exit, or manage specific site permissions.</li>
+                            <li>You can also click the "lock" icon next to the URL in the address bar to manage site-specific cookie settings.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Mozilla Firefox:</strong>
+                        <ul>
+                            <li>Open Firefox, click the three-line menu icon in the top right corner.</li>
+                            <li>Go to "Options" > "Privacy & Security" > "Cookies and Site Data".</li>
+                            <li>You can choose "Standard," "Strict," or "Custom" protection levels. "Custom" allows you to block specific types of trackers and cookies.</li>
+                            <li>You can also manage stored data for individual websites.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Apple Safari:</strong>
+                        <ul>
+                            <li>Open Safari, go to "Safari" > "Preferences" > "Privacy".</li>
+                            <li>You can select "Prevent cross-site tracking" to block third-party cookies and "Block all cookies" if desired.</li>
+                            <li>You can also manage website data for individual sites.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Microsoft Edge:</strong>
+                        <ul>
+                            <li>Open Edge, click the three-dot menu icon in the top right corner.</li>
+                            <li>Go to "Settings" > "Privacy, search, and services" > "Tracking prevention".</li>
+                            <li>You can choose different levels of tracking prevention or go to "Cookies and site data" to manage specific settings.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Opera:</strong>
+                        <ul>
+                            <li>Open Opera, click the "O" menu icon in the top left corner.</li>
+                            <li>Go to "Settings" > "Privacy & security" > "Cookies and other site data".</li>
+                            <li>You can choose to block third-party cookies or manage site-specific settings.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p>Please remember that if you configure your browser to block all cookies (including essential cookies), you may not be able to access all or parts of our Site, and some functionalities may not work correctly. The process for managing cookies may vary slightly depending on your browser version. For the most up-to-date instructions, please consult your browser's official help documentation.</p>
+
+                <h3>3.3. Opt-Out Links for Third-Party Services</h3>
+                <p>Many third-party advertising networks and analytics providers offer their own opt-out mechanisms. You can visit the following links to opt-out of their tracking cookies:</p>
+                <ul>
+                    <li><strong>Google Analytics Opt-out Browser Add-on:</strong> <a href="https://tools.google.com/dlpage/gaoptout" target="_blank">https://tools.google.com/dlpage/gaoptout</a></li>
+                    <li><strong>Digital Advertising Alliance (DAA) Opt-Out Tool (for US):</strong> <a href="http://www.aboutads.info/choices/" target="_blank">http://www.aboutads.info/choices/</a></li>
+                    <li><strong>European Interactive Digital Advertising Alliance (EDAA) Opt-Out Tool (for EU):</strong> <a href="http://www.youronlinechoices.eu/" target="_blank">http://www.youronlinechoices.eu/</a></li>
+                    <li><strong>Network Advertising Initiative (NAI) Opt-Out Page:</strong> <a href="http://optout.networkadvertising.org/" target="_blank">http://optout.networkadvertising.org/</a></li>
+                    <li><strong>Facebook Ad Preferences:</strong> You can manage your Facebook ad preferences directly within your Facebook account settings.</li>
+                </ul>
+                <p>Opting out of specific advertising networks does not mean you will no longer receive online advertising. It means that the companies from which you have opted out will no longer deliver ads tailored to your web preferences and usage patterns. You may still receive generic or contextual ads.</p>
+
+                <h3>3.4. Mobile Device Settings</h3>
+                <p>If you access our Site from a mobile device, your device may also allow you to control cookies and advertising identifiers. For example, on iOS devices, you can enable "Limit Ad Tracking" in your privacy settings. On Android devices, you can enable "Opt out of Ads Personalization." Consult your device's documentation for specific instructions.</p>
+                <p>These settings provide an additional layer of control over how your mobile device shares data for advertising purposes. It's important to review both your browser settings and your mobile device settings to ensure your preferences are consistently applied across all your online activities.</p>
+
+                <h2>4. Your Rights Regarding Cookies and Data</h2>
+                <p>As part of our commitment to data privacy, we recognize and support your rights concerning the data collected through cookies and other tracking technologies. These rights are particularly relevant for users in regions governed by comprehensive data protection laws like the GDPR (General Data Protection Regulation) in the European Economic Area (EEA) and the UK, and the CCPA/CPRA (California Consumer Privacy Act/California Privacy Rights Act) in California.</p>
+
+                <h3>4.1. Right to Withdraw Consent</h3>
+                <p>Where our use of cookies is based on your consent, you have the absolute right to withdraw that consent at any time. This can typically be done through our cookie consent tool (accessible via a link in the footer) or by adjusting your browser settings as described in Section 3. Withdrawing your consent will not affect the lawfulness of any processing carried out before your withdrawal. Once we receive your withdrawal of consent, we will cease using the relevant cookies and processing data collected through them, unless there is another legal basis for such processing (e.g., for strictly necessary cookies).</p>
+                <p>It is important to understand that withdrawing consent for certain cookie categories (e.g., performance or advertising) will only prevent future data collection via those cookies. It will not delete data already collected, though you may have a separate right to erasure for that data, as discussed below. We strive to make the consent withdrawal process as straightforward as the consent granting process, ensuring you retain full control over your data preferences.</p>
+
+                <h3>4.2. Right to Access Your Cookie-Related Data</h3>
+                <p>You have the right to request access to the personal data we hold about you that may have been collected through cookies or other tracking technologies. This includes information about the types of data collected, the purposes of processing, and any third parties with whom this data has been shared. To exercise this right, please contact us using the details provided in Section 6. We will provide you with a copy of your personal data in a structured, commonly used, and machine-readable format, subject to verification of your identity and any legal limitations.</p>
+                <p>This right allows you to understand what specific information about your browsing habits or preferences has been associated with your unique cookie identifiers. While cookie data is often pseudonymized, when it can be linked to an identifiable individual (e.g., through an account login), it falls under personal data and is subject to your access rights. We are committed to providing transparent access to this information to empower your data privacy choices.</p>
+
+                <h3>4.3. Right to Erasure (Right to be Forgotten)</h3>
+                <p>In certain circumstances, you have the right to request the deletion or removal of your personal data, including data collected via cookies, where there is no compelling reason for its continued processing. This right applies if, for example, the data is no longer necessary for the purpose for which it was collected, or you withdraw your consent and there is no other legal basis for processing. Please note that this right is not absolute and may be subject to legal exceptions, such as retaining data for legal compliance, fraud prevention, or the establishment, exercise, or defense of legal claims.</p>
+                <p>If you wish to exercise your right to erasure concerning cookie-related data, please contact us. We will assess your request in accordance with applicable data protection laws and take appropriate steps to delete or anonymize your data where feasible and legally required. Deleting cookies from your browser directly is often the quickest way to remove locally stored cookie data, but exercising the right to erasure with us ensures that any server-side data linked to those cookies is also addressed.</p>
+
+                <h3>4.4. Other Data Protection Rights</h3>
+                <p>Beyond the rights specifically related to cookies, your broader data protection rights (as detailed in our <a href="privacy.html">Privacy Policy</a>) also apply to any personal data collected through cookies. These may include:</p>
+                <ul>
+                    <li><strong>Right to Rectification:</strong> The right to have inaccurate personal data corrected.</li>
+                    <li><strong>Right to Restriction of Processing:</strong> The right to request that we limit the way we use your data.</li>
+                    <li><strong>Right to Data Portability:</strong> The right to receive your personal data in a portable format.</li>
+                    <li><strong>Right to Object:</strong> The right to object to processing based on legitimate interests or for direct marketing.</li>
+                </ul>
+                <p>For detailed information on how to exercise these broader rights, please refer to Section 6 of our <a href="privacy.html">Privacy Policy</a>. We are dedicated to upholding all your data protection rights and providing the necessary mechanisms for you to exercise control over your personal information.</p>
+
+                <h2>5. Changes to This Cookie Policy</h2>
+                <p>Knotivira reserves the right to update or change this Cookie Policy at any time to reflect changes in our practices, legal requirements, or technological advancements. We will notify you of any material changes by posting the new Cookie Policy on this page and updating the "Last Updated" date at the top of this policy. We may also provide more prominent notice (such as an email notification or a banner on our Site) for significant changes, especially those that might impact your rights or how your data is processed.</p>
+                <p>You are advised to review this Cookie Policy periodically for any changes. Changes to this Cookie Policy are effective when they are posted on this page. Your continued use of the Site after any modifications to this Cookie Policy will constitute your acknowledgment of the modifications and your consent to abide and be bound by the modified Cookie Policy.</p>
+                <p>We encourage you to revisit this page regularly to stay informed about how we use cookies and how we are protecting your privacy. If you have any questions or concerns about these changes, please do not hesitate to contact us using the information provided in Section 6.</p>
+                <p>Our commitment to transparency means we will always strive to clearly communicate any updates to this policy. We understand that privacy policies can be complex, and we aim to make our explanations as clear and accessible as possible. Your understanding and trust are vital to our relationship, and we believe that keeping you informed about our data practices is a fundamental part of that trust.</p>
+                <p>Any revisions made will always be in line with applicable data protection laws and best practices. We continuously monitor legal developments and industry guidelines to ensure our Cookie Policy remains compliant and reflects the highest standards of data privacy. This proactive approach ensures that your rights and preferences are always respected.</p>
+                <p>The date of the "Last Updated" will always serve as a clear indicator of when the policy was last revised. We recommend checking this date whenever you visit our Site to quickly ascertain if any changes have occurred since your last review. For minor, non-material changes, we may not issue a separate notification but will update the date accordingly.</p>
+                <p>Should you have any specific concerns about a particular change or how it might affect your data, our privacy team is available to provide clarification. We are dedicated to ensuring that you feel informed and empowered regarding your privacy choices on Knotivira.com.</p>
+                <p>This iterative process of review and update is a core part of our commitment to maintaining a robust and trustworthy privacy framework. We believe that a dynamic Cookie Policy, which evolves with both technology and regulation, is essential for truly protecting our users' privacy in the digital age. Your continued engagement with Knotivira signifies your acceptance of this evolving commitment to your data privacy.</p>
+
+                <h2>6. Managing Your Cookie Preferences and Contacting Us</h2>
+                <p>Knotivira is dedicated to providing you with clear avenues to manage your cookie preferences and to contact us for any questions or concerns related to this Cookie Policy or your data privacy. We understand that navigating online privacy can be complex, and we are here to assist you every step of the way. Below, we detail various scenarios and the best ways to get in touch or adjust your settings.</p>
+
+                <h3>6.1. General Inquiries About This Cookie Policy</h3>
+                <p>If you have general questions about the content of this Cookie Policy, require clarification on any section, or wish to understand more about how cookies function on our Site, please reach out. We are committed to ensuring that our policies are understandable and accessible to all users.</p>
+                <ul>
+                    <li><strong>How to Contact:</strong> Email us at <a href="mailto:privacy@knotivira.com">privacy@knotivira.com</a> or use the contact form on our <a href="contact.html">Contact Us</a> page, specifying "Cookie Policy Inquiry" in the subject line.</li>
+                    <li><strong>What to Include:</strong> Clearly state your question or the section of the policy you need clarification on.</li>
+                    <li><strong>Expected Response:</strong> Our privacy team will review your inquiry and provide a comprehensive response within 1-3 business days.</li>
+                </ul>
+
+                <h3>6.2. Withdrawing Consent for Non-Essential Cookies</h3>
+                <p>You have the right to withdraw your consent for non-essential cookies at any time. This action will prevent future data collection by those specific cookie categories.</p>
+                <ul>
+                    <li><strong>How to Withdraw:</strong>
+                        <ol>
+                            <li>Click on the "Cookie Settings" link in the footer of our Site. This will re-open the cookie consent banner.</li>
+                            <li>Adjust your preferences by toggling off the categories of cookies you no longer consent to (e.g., Performance, Advertising, Social Media).</li>
+                            <li>Click "Save Preferences" or "Decline All Non-Essential" to confirm your choice.</li>
+                            <li>Alternatively, you can clear your browser's cookies (see Section 3.2 for browser-specific instructions) and then revisit the Site to be presented with the consent banner again.</li>
+                        </ol>
+                    </li>
+                    <li><strong>What Happens:</strong> The Site will cease setting new cookies from the categories you have opted out of. Existing cookies from those categories will remain on your device until their expiration or until you manually clear them from your browser.</li>
+                    <li><strong>Confirmation:</strong> The cookie banner will reflect your updated preferences on subsequent visits.</li>
+                </ul>
+
+                <h3>6.3. Requesting Access to Your Cookie-Related Personal Data</h3>
+                <p>If you wish to know what personal data, if any, we hold about you that has been collected via cookies and tracking technologies, you can submit a data access request.</p>
+                <ul>
+                    <li><strong>How to Request:</strong> Send an email to <a href="mailto:privacy@knotivira.com">privacy@knotivira.com</a> with the subject line "Data Access Request - Cookie Data."</li>
+                    <li><strong>What to Include:</strong> Your full name, email address associated with your Knotivira account (if any), and a clear statement that you are requesting access to your cookie-related personal data. We may ask for additional information to verify your identity.</li>
+                    <li><strong>Expected Response:</strong> We will acknowledge your request within [e.g., 2 business days] and provide the requested information within [e.g., 30 days], in accordance with applicable data protection laws.</li>
+                </ul>
+
+                <h3>6.4. Requesting Erasure of Your Cookie-Related Personal Data</h3>
+                <p>You have the right to request the deletion of personal data collected via cookies, subject to certain legal exceptions (e.g., data needed for legal compliance or transactional records).</p>
+                <ul>
+                    <li><strong>How to Request:</strong> Email <a href="mailto:privacy@knotivira.com">privacy@knotivira.com</a> with the subject line "Data Erasure Request - Cookie Data."</li>
+                    <li><strong>What to Include:</strong> Your full name, email address, and a clear request for erasure of your cookie-related personal data. Identity verification will be required.</li>
+                    <li><strong>Expected Response:</strong> We will assess your request and inform you of the outcome within [e.g., 30 days], detailing any reasons for denial if applicable, as per legal requirements.</li>
+                </ul>
+
+                <h3>6.5. Reporting Concerns About Third-Party Cookies</h3>
+                <p>If you have specific concerns about how a third-party cookie (e.g., from an advertising partner) is being used on our Site, or if you believe it violates your privacy, please inform us.</p>
+                <ul>
+                    <li><strong>How to Report:</strong> Email <a href="mailto:privacy@knotivira.com">privacy@knotivira.com</a> with the subject "Third-Party Cookie Concern."</li>
+                    <li><strong>What to Include:</strong> The name of the third party (if known), the specific cookie in question (if you can identify it), and a detailed description of your concern.</li>
+                    <li><strong>Our Action:</strong> We will investigate the third-party cookie's usage and our relationship with that provider to ensure compliance with our policies and applicable laws. We may contact the third party for clarification or action.</li>
+                </ul>
+
+                <h3>6.6. Understanding Specific Cookie Types and Their Impact</h3>
+                <p>If you need more detailed explanations on a particular type of cookie (e.g., "What exactly does a 'Functionality Cookie' do for my experience?") or its potential impact if disabled, we are happy to provide further context.</p>
+                <ul>
+                    <li><strong>How to Inquire:</strong> Use the contact form on our <a href="contact.html">Contact Us</a> page or email <a href="mailto:info@knotivira.com">info@knotivira.com</a>, specifying "Cookie Type Explanation Request."</li>
+                    <li><strong>What to Include:</strong> The specific cookie category or type you want to understand better.</li>
+                    <li><strong>Our Response:</strong> We will provide a more in-depth, user-friendly explanation tailored to your query.</li>
+                </ul>
+
+                <h3>6.7. Opting Out of Specific Tracking Technologies (Beyond Cookies)</h3>
+                <p>While browser settings primarily manage cookies, if you have concerns about other tracking technologies like web beacons or local storage, and want to know how to minimize their use, please contact us.</p>
+                <ul>
+                    <li><strong>How to Inquire:</strong> Email <a href="mailto:privacy@knotivira.com">privacy@knotivira.com</a> with the subject "Tracking Technology Opt-Out Inquiry."</li>
+                    <li><strong>What to Include:</strong> Specify the technology (e.g., "web beacons," "local storage") and your concerns.</li>
+                    <li><strong>Our Guidance:</strong> We will provide available options for limiting these technologies, which may involve browser extensions, specific software, or device settings, as direct opt-outs are not always universally available for all such technologies.</li>
+                </ul>
+
+                <h3>6.8. Data Protection Officer (DPO) Contact</h3>
+                <p>For users in regions like the EEA or UK, you may have the right to contact our designated Data Protection Officer for any privacy-related concerns, including those pertaining to cookies.</p>
+                <ul>
+                    <li><strong>How to Contact:</strong> Direct email to <a href="mailto:dpo@knotivira.com">dpo@knotivira.com</a> (if a DPO is formally appointed) or use the general privacy email <a href="mailto:privacy@knotivira.com">privacy@knotivira.com</a>.</li>
+                    <li><strong>What to Include:</strong> Your full name, contact details, and a detailed description of your data protection concern.</li>
+                    <li><strong>DPO's Role:</strong> The DPO oversees our data protection strategy and ensures compliance with GDPR and other relevant privacy regulations. They are an independent point of contact for all data privacy matters.</li>
+                </ul>
+
+                <h3>6.9. Complaints to Supervisory Authorities</h3>
+                <p>If you are in the EEA or UK and believe that our processing of your personal data, including through cookies, infringes data protection laws, you have a legal right to lodge a complaint with a supervisory authority responsible for data protection in your country.</p>
+                <ul>
+                    <li><strong>How to Lodge:</strong> Contact your local data protection authority directly. Knotivira will cooperate with any such investigations.</li>
+                    <li><strong>Our Commitment:</strong> While you have this right, we encourage you to contact us first so we can attempt to resolve your concerns directly and efficiently.</li>
+                </ul>
+
+                <h3>6.10. Understanding the Impact of Declining Cookies on Site Features</h3>
+                <p>If you're unsure about the specific features that might be affected by declining certain cookie categories, we can provide more detailed information.</p>
+                <ul>
+                    <li><strong>How to Inquire:</strong> Email <a href="mailto:info@knotivira.com">info@knotivira.com</a> with the subject "Cookie Impact Inquiry."</li>
+                    <li><strong>What to Include:</strong> Specify the cookie category (e.g., "Functionality Cookies") and the features you are concerned about.</li>
+                    <li><strong>Our Explanation:</strong> We will detail which specific functionalities (e.g., saved login, personalized recommendations, social sharing) rely on those cookies.</li>
+                </ul>
+
+                <h3>6.11. Requesting a Copy of This Cookie Policy</h3>
+                <p>If you require a copy of this Cookie Policy in a specific format (e.g., PDF) for your records, please let us know.</p>
+                <ul>
+                    <li><strong>How to Request:</strong> Email <a href="mailto:info@knotivira.com">info@knotivira.com</a> with the subject "Request for Cookie Policy Copy."</li>
+                    <li><strong>What to Include:</strong> Your name and preferred email address for delivery.</li>
+                    <li><strong>Our Action:</strong> We will send you a digital copy of the current Cookie Policy.</li>
+                </ul>
+
+                <h3>6.12. Questions About Cookie Expiration Dates</h3>
+                <p>If you have questions about the specific expiration dates of cookies used on our Site, especially persistent ones, and how they are managed.</p>
+                <ul>
+                    <li><strong>How to Inquire:</strong> Email <a href="mailto:privacy@knotivira.com">privacy@knotivira.com</a> with the subject "Cookie Expiration Inquiry."</li>
+                    <li><strong>What to Include:</strong> General nature of your query regarding cookie lifespans.</li>
+                    <li><strong>Our Explanation:</strong> We can provide general information on typical cookie lifespans for different categories. For precise details on specific cookies, you can often inspect them via your browser's developer tools.</li>
+                </ul>
+
+                <h3>6.13. Information on First-Party vs. Third-Party Cookie Usage</h3>
+                <p>If you need further clarification on the distinction between first-party and third-party cookies as they relate to Knotivira.com.</p>
+                <ul>
+                    <li><strong>How to Inquire:</strong> Use the contact form or email <a href="mailto:info@knotivira.com">info@knotivira.com</a> with the subject "First/Third-Party Cookie Clarification."</li>
+                    <li><strong>What to Include:</strong> Your specific questions about the control and data flow of these cookie types.</li>
+                    <li><strong>Our Explanation:</strong> We will provide a more detailed breakdown of which entities control which cookies and how data is shared (or not shared) between them.</li>
+                </ul>
+
+                <h3>6.14. Understanding Cookie Consent Records</h3>
+                <p>If you have questions about how Knotivira records and maintains your cookie consent choices.</p>
+                <ul>
+                    <li><strong>How to Inquire:</strong> Email <a href="mailto:privacy@knotivira.com">privacy@knotivira.com</a> with the subject "Cookie Consent Record Inquiry."</li>
+                    <li><strong>What to Include:</strong> Your specific questions about the consent logging process.</li>
+                    <li><strong>Our Explanation:</strong> We will explain that your consent is typically recorded via a specific cookie or server-side log, linked to your browser or account, to remember your preferences for future visits.</li>
+                </ul>
+
+                <h3>6.15. Technical Issues with Cookie Banner or Preferences</h3>
+                <p>If you are experiencing technical difficulties with our cookie consent banner, or if your preferences are not being saved correctly.</p>
+                <ul>
+                    <li><strong>How to Report:</strong> Email <a href="mailto:techsupport@knotivira.com">techsupport@knotivira.com</a> (or <a href="mailto:info@knotivira.com">info@knotivira.com</a>) with the subject "Cookie Banner Technical Issue."</li>
+                    <li><strong>What to Include:</strong> A detailed description of the issue, screenshots (if possible), your browser type and version, and device information.</li>
+                    <li><strong>Our Action:</strong> Our technical team will investigate and work to resolve the issue promptly.</li>
+                </ul>
+
+                <h3>6.16. Questions About Data Aggregation and Anonymization</h3>
+                <p>If you are curious about how data collected through performance/analytics cookies is aggregated and anonymized to protect your privacy.</p>
+                <ul>
+                    <li><strong>How to Inquire:</strong> Email <a href="mailto:privacy@knotivira.com">privacy@knotivira.com</a> with the subject "Data Aggregation Inquiry."</li>
+                    <li><strong>What to Include:</strong> Your specific questions about our anonymization processes.</li>
+                    <li><strong>Our Explanation:</strong> We will explain that individual data points are combined into statistical groups, and identifiers that could link data back to an individual are removed or obscured.</li>
+                </ul>
+
+                <h3>6.17. Concerns About Children's Privacy and Cookies</h3>
+                <p>If you are a parent or guardian and have concerns about cookies affecting children's privacy on our Site, or if you believe a child has provided personal data without consent.</p>
+                <ul>
+                    <li><strong>How to Report:</strong> Email <a href="mailto:privacy@knotivira.com">privacy@knotivira.com</a> with the subject "Children's Privacy & Cookie Concern."</li>
+                    <li><strong>What to Include:</strong> Details of your concern and any relevant information.</li>
+                    <li><strong>Our Action:</strong> We will investigate immediately and take appropriate steps in accordance with our <a href="privacy.html#children-privacy">Children's Privacy Policy</a>.</li>
+                </ul>
+
+                <h3>6.18. Inquiries About Specific Third-Party Cookie Providers</h3>
+                <p>If you want to know more about a particular third-party cookie provider listed in your browser's cookie settings that you suspect is related to Knotivira.</p>
+                <ul>
+                    <li><strong>How to Inquire:</strong> Email <a href="mailto:privacy@knotivira.com">privacy@knotivira.com</a> with the subject "Third-Party Provider Inquiry."</li>
+                    <li><strong>What to Include:</strong> The name of the third-party domain or cookie.</li>
+                    <li><strong>Our Explanation:</strong> We will confirm our relationship with that provider and direct you to their privacy policy for more details on their specific data practices.</li>
+                </ul>
+
+                <h3>6.19. Requesting Information on Cookie Audits</h3>
+                <p>If you are interested in our process for regularly auditing the cookies used on our Site to ensure compliance and accuracy of this policy.</p>
+                <ul>
+                    <li><strong>How to Inquire:</strong> Email <a href="mailto:privacy@knotivira.com">privacy@knotivira.com</a> with the subject "Cookie Audit Process Inquiry."</li>
+                    <li><strong>Our Explanation:</strong> We will describe our internal procedures for regularly scanning and reviewing the cookies deployed on our Site.</li>
+                </ul>
+
+                <h3>6.20. Questions About Cookie Data and Personalized Ads</h3>
+                <p>If you want to understand precisely how cookie data influences the personalized advertisements you see from Knotivira or its partners.</p>
+                <ul>
+                    <li><strong>How to Inquire:</strong> Email <a href="mailto:privacy@knotivira.com">privacy@knotivira.com</a> with the subject "Personalized Ads & Cookies."</li>
+                    <li><strong>Our Explanation:</strong> We will explain how browsing history and preferences (captured by targeting cookies) are used to create relevant ad segments without directly identifying you.</li>
+                </ul>
+
+                <h3>6.21. Inquiries About Cookie Data Retention Periods</h3>
+                <p>If you have questions about how long data collected via different cookie types is retained by Knotivira or our third-party partners.</p>
+                <ul>
+                    <li><strong>How to Inquire:</strong> Email <a href="mailto:privacy@knotivira.com">privacy@knotivira.com</a> with the subject "Cookie Data Retention Inquiry."</li>
+                    <li><strong>Our Explanation:</strong> We will provide general retention guidelines for different cookie categories, noting that specific third-party retention policies are governed by those providers.</li>
+                </ul>
+
+                <h3>6.22. Requesting Information on Cookie Consent Logs</h3>
+                <p>If you want to know how Knotivira logs and stores records of your cookie consent choices for compliance purposes.</p>
+                <ul>
+                    <li><strong>How to Inquire:</strong> Email <a href="mailto:privacy@knotivira.com">privacy@knotivira.com">privacy@knotivira.com</a> with the subject "Cookie Consent Log Inquiry."</li>
+                    <li><strong>Our Explanation:</strong> We will explain that a record of your consent (e.g., date, time, choices) is stored securely to demonstrate compliance with consent requirements.</li>
+                </ul>
+
+                <h3>6.23. Questions About Cookie Data and Site Security</h3>
+                <p>If you are curious about how strictly necessary cookies contribute to the security of your browsing session and transactions on Knotivira.com.</p>
+                <ul>
+                    <li><strong>How to Inquire:</strong> Email <a href="mailto:security@knotivira.com">security@knotivira.com</a> (or <a href="mailto:privacy@knotivira.com">privacy@knotivira.com</a>) with the subject "Cookie Security Inquiry."</li>
+                    <li><strong>Our Explanation:</strong> We will explain how these cookies help maintain session integrity, prevent fraud, and ensure secure login processes.</li>
+                </ul>
+
+                <h3>6.24. Inquiries About Future Cookie Technologies</h3>
+                <p>If you have questions about emerging cookie technologies or privacy-enhancing technologies that Knotivira might consider implementing in the future.</p>
+                <ul>
+                    <li><strong>How to Inquire:</strong> Email <a href="mailto:info@knotivira.com">info@knotivira.com</a> with the subject "Future Cookie Tech Inquiry."</li>
+                    <li><strong>Our Response:</strong> While we cannot disclose future plans, we can discuss our general approach to adopting new technologies while prioritizing user privacy.</li>
+                </ul>
+
+                <h3>6.25. Providing Feedback on This Cookie Policy</h3>
+                <p>We welcome your feedback on the clarity, completeness, or any other aspect of this Cookie Policy.</p>
+                <ul>
+                    <li><strong>How to Provide:</strong> Email <a href="mailto:privacy@knotivira.com">privacy@knotivira.com</a> with the subject "Cookie Policy Feedback."</li>
+                    <li><strong>What to Include:</strong> Your specific comments or suggestions for improvement.</li>
+                    <li><strong>Our Action:</strong> Your feedback will be reviewed by our privacy team for consideration in future updates.</li>
+                </ul>
+
+                <h3>6.26. Questions About Cookie Data and User Experience</h3>
+                <p>If you want to understand how functionality cookies specifically enhance your user experience, beyond just remembering preferences.</p>
+                <ul>
+                    <li><strong>How to Inquire:</strong> Email <a href="mailto:info@knotivira.com">info@knotivira.com</a> with the subject "Cookie UX Impact Inquiry."</li>
+                    <li><strong>Our Explanation:</strong> We can provide examples of how these cookies contribute to seamless navigation, personalized content delivery, and overall site usability.</li>
+                </ul>
+
+                <h3>6.27. Inquiries About Cookie Data and Community Features</h3>
+                <p>If you have questions about how cookies facilitate your interaction with the Creator Collective or other community features on our Site.</p>
+                <ul>
+                    <li><strong>How to Inquire:</strong> Email <a href="mailto:privacy@knotivira.com">privacy@knotivira.com</a> with the subject "Community Features & Cookies."</li>
+                    <li><strong>Our Explanation:</strong> We will explain how certain cookies might manage your session within forums, remember your display preferences, or enable social sharing within the community.</li>
+                </ul>
+
+                <h3>6.28. Requesting Information on Cookie Data and Legal Compliance</h3>
+                <p>If you want to understand how Knotivira ensures that its use of cookies complies with various international data protection laws.</p>
+                <ul>
+                    <li><strong>How to Inquire:</strong> Email <a href="mailto:legal@knotivira.com">legal@knotivira.com</a> (or <a href="mailto:privacy@knotivira.com">privacy@knotivira.com</a>) with the subject "Cookie Legal Compliance Inquiry."</li>
+                    <li><strong>Our Explanation:</strong> We will provide an overview of our compliance framework, including adherence to GDPR, CCPA, and other relevant regulations.</li>
+                </ul>
+
+                <h3>6.29. Questions About Cookie Data and Analytics Reporting</h3>
+                <p>If you are interested in how the anonymous data collected by performance cookies is used to generate reports and insights for Knotivira's internal use.</p>
+                <ul>
+                    <li><strong>How to Inquire:</strong> Email <a href="mailto:info@knotivira.com">info@knotivira.com</a> with the subject "Analytics Reporting & Cookies."</li>
+                    <li><strong>Our Explanation:</strong> We will describe how aggregated data helps us identify trends, popular content, and areas for strategic improvement without identifying individual users.</li>
+                </ul>
+
+                <h3>6.30. Inquiries About Cookie Data and A/B Testing</h3>
+                <p>If you are curious about how cookies might be used in A/B testing or other website optimization experiments on Knotivira.com.</p>
+                <ul>
+                    <li><strong>How to Inquire:</strong> Email <a href="mailto:info@knotivira.com">info@knotivira.com</a> with the subject "A/B Testing & Cookies."</li>
+                    <li><strong>Our Explanation:</strong> We will explain that cookies help us consistently show specific versions of a page to a user during a test to measure performance differences.</li>
+                </ul>
+
+                <h3>6.31. Questions About Cookie Data and Affiliate Marketing</h3>
+                <p>If you want to understand how cookies might be used in relation to any affiliate marketing programs Knotivira participates in.</p>
+                <ul>
+                    <li><strong>How to Inquire:</strong> Email <a href="mailto:marketing@knotivira.com">marketing@knotivira.com</a> (or <a href="mailto:privacy@knotivira.com">privacy@knotivira.com</a>) with the subject "Affiliate Marketing & Cookies."</li>
+                    <li><strong>Our Explanation:</strong> We will explain how certain cookies track referrals from affiliate partners to ensure proper commission attribution, without collecting excessive personal data.</li>
+                </ul>
+
+                <h3>6.32. Inquiries About Cookie Data and Fraud Prevention</h3>
+                <p>If you have questions about how cookies contribute to our efforts in detecting and preventing fraudulent activities on the Site.</p>
+                <ul>
+                    <li><strong>How to Inquire:</strong> Email <a href="mailto:security@knotivira.com">security@knotivira.com</a> (or <a href="mailto:privacy@knotivira.com">privacy@knotivira.com</a>) with the subject "Fraud Prevention & Cookies."</li>
+                    <li><strong>Our Explanation:</strong> We will explain how certain cookies can help identify suspicious patterns of behavior or repeated attempts at unauthorized access.</li>
+                </ul>
+
+                <h3>6.33. Questions About Cookie Data and User Authentication</h3>
+                <p>If you want to understand how essential cookies play a role in authenticating your login and maintaining your session security.</p>
+                <ul>
+                    <li><strong>How to Inquire:</strong> Email <a href="mailto:security@knotivira.com">security@knotivira.com</a> (or <a href="mailto:privacy@knotivira.com">privacy@knotivira.com</a>) with the subject "Authentication Cookies."</li>
+                    <li><strong>Our Explanation:</strong> We will detail how these cookies securely store session IDs to verify your identity as you navigate the Site.</li>
+                </ul>
+
+                <h3>6.34. Inquiries About Cookie Data and Shopping Cart Persistence</h3>
+                <p>If you have questions about how cookies remember items in your shopping cart, even across different visits.</p>
+                <ul>
+                    <li><strong>How to Inquire:</strong> Email <a href="mailto:info@knotivira.com">info@knotivira.com</a> with the subject "Shopping Cart Cookies."</li>
+                    <li><strong>Our Explanation:</strong> We will explain how persistent functionality cookies store your cart contents to enhance your shopping convenience.</li>
+                </ul>
+
+                <h3>6.35. Questions About Cookie Data and Language/Currency Preferences</h3>
+                <p>If you want to know how cookies store your preferred language or currency settings on the Site.</p>
+                <ul>
+                    <li><strong>How to Inquire:</strong> Email <a href="mailto:info@knotivira.com">info@knotivira.com</a> with the subject "Language/Currency Cookies."</li>
+                    <li><strong>Our Explanation:</strong> We will explain how functionality cookies remember these choices to provide a localized experience.</li>
+                </ul>
+
+                <h3>6.36. Inquiries About Cookie Data and Website Personalization</h3>
+                <p>If you are interested in how data from cookies contributes to personalizing content or product recommendations on the Site.</p>
+                <ul>
+                    <li><strong>How to Inquire:</strong> Email <a href="mailto:marketing@knotivira.com">marketing@knotivira.com</a> (or <a href="mailto:privacy@knotivira.com">privacy@knotivira.com</a>) with the subject "Website Personalization & Cookies."</li>
+                    <li><strong>Our Explanation:</strong> We will explain how browsing history and preferences are used to suggest relevant products or patterns.</li>
+                </ul>
+
+                <h3>6.37. Questions About Cookie Data and Site Performance Monitoring</h3>
+                <p>If you want to understand how performance cookies help us monitor and improve the loading speed and overall responsiveness of our Site.</p>
+                <ul>
+                    <li><strong>How to Inquire:</strong> Email <a href="mailto:techsupport@knotivira.com">techsupport@knotivira.com</a> (or <a href="mailto:info@knotivira.com">info@knotivira.com</a>) with the subject "Site Performance Cookies."</li>
+                    <li><strong>Our Explanation:</strong> We will explain how these cookies track technical metrics like page load times and server response to identify bottlenecks.</li>
+                </ul>
+
+                <h3>6.38. Inquiries About Cookie Data and User Journey Mapping</h3>
+                <p>If you are curious about how aggregated cookie data helps us map user journeys through the Site to optimize navigation and content flow.</p>
+                <ul>
+                    <li><strong>How to Inquire:</strong> Email <a href="mailto:info@knotivira.com">info@knotivira.com</a> with the subject "User Journey Mapping & Cookies."</li>
+                    <li><strong>Our Explanation:</strong> We will explain how anonymous clickstream data helps us understand common paths users take and identify areas for improvement in site structure.</li>
+                </ul>
+
+                <h3>6.39. Questions About Cookie Data and Marketing Campaign Effectiveness</h3>
+                <p>If you want to understand how advertising cookies help us measure the success of our marketing campaigns (e.g., how many clicks an ad received, how many purchases resulted).</p>
+                <ul>
+                    <li><strong>How to Inquire:</strong> Email <a href="mailto:marketing@knotivira.com">marketing@knotivira.com</a> with the subject "Marketing Campaign Cookies."</li>
+                    <li><strong>Our Explanation:</strong> We will explain how these cookies track user interactions with ads and subsequent actions on our Site to attribute conversions.</li>
+                </ul>
+
+                <h3>6.40. General Data Privacy Questions (Beyond Cookies)</h3>
+                <p>For any broader questions about your personal data privacy that extend beyond cookies, please refer to our full <a href="privacy.html">Privacy Policy</a> or contact our privacy team.</p>
+                <ul>
+                    <li><strong>How to Contact:</strong> Email <a href="mailto:privacy@knotivira.com">privacy@knotivira.com</a> or use the contact form on our <a href="contact.html">Contact Us</a> page.</li>
+                    <li><strong>Our Commitment:</strong> We are committed to addressing all your data privacy concerns comprehensively and in accordance with applicable laws.</li>
+                </ul>
+                <p>We are committed to providing clear and accessible information regarding our use of cookies and your privacy rights. Your understanding and control over your data are paramount to us. Thank you for being a valued member of the Knotivira community.</p>
+            </div>
+        </section>
+    </main>
+
+    <div class="cookie-consent-banner" id="cookieBanner">
+        <p>We use cookies to enhance your browsing experience, analyze site traffic, personalize content, and serve targeted advertisements. By clicking "Accept All Cookies" or continuing to use our site, you agree to our use of cookies as described in our <a href="cookies.html" style="color: #CEB1A1; text-decoration: underline;">Cookie Policy</a>. You can manage your preferences at any time.</p>
+        <div class="button-group">
+            <button id="acceptCookies">Accept All Cookies</button>
+            <button id="declineCookies" class="decline-button">Decline Non-Essential</button>
+            <button id="manageCookies">Manage Preferences</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="cookies.html">Cookie Policy</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="footer-address">
+                <p>Knotivira Headquarters</p>
+                <p>123 Yarn Weaver Lane, Creative City, State 12345, India</p>
+                <p>Email: info@knotivira.com | Phone: +91 98765 43210</p>
+            </div>
+            <div class="disclaimer-text">
+                <p>&copy; 2025 Knotivira. All rights reserved. "The Art of Yarn. Elevated."</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cookieBanner = document.getElementById('cookieBanner');
+            const acceptButton = document.getElementById('acceptCookies');
+            const declineButton = document.getElementById('declineCookies');
+            const manageButton = document.getElementById('manageCookies');
+
+            // Check if cookie consent has been given
+            const consentGiven = localStorage.getItem('knotivira_cookie_consent');
+
+            if (consentGiven) {
+                cookieBanner.style.display = 'none'; // Hide banner if consent exists
+            } else {
+                cookieBanner.style.display = 'flex'; // Show banner if no consent
+            }
+
+            acceptButton.addEventListener('click', function() {
+                // Set a flag in local storage indicating consent
+                localStorage.setItem('knotivira_cookie_consent', 'accepted');
+                // You would typically set all cookies here
+                console.log('All cookies accepted.');
+                cookieBanner.style.display = 'none';
+            });
+
+            declineButton.addEventListener('click', function() {
+                // Set a flag indicating non-essential cookies declined
+                localStorage.setItem('knotivira_cookie_consent', 'declined_non_essential');
+                // You would typically disable non-essential cookies here
+                console.log('Non-essential cookies declined.');
+                cookieBanner.style.display = 'none';
+            });
+
+            manageButton.addEventListener('click', function() {
+                // For a real site, this would open a more detailed preference modal.
+                // For this example, we'll just log and hide the banner.
+                // In a real scenario, you'd navigate to a dedicated cookie settings page or open a modal.
+                console.log('User wants to manage cookie preferences.');
+                // For now, just hide the banner, but ideally, this would lead to a granular control UI.
+                localStorage.setItem('knotivira_cookie_consent', 'managed'); // Or set a specific managed state
+                cookieBanner.style.display = 'none';
+                // You might want to redirect to a cookie settings page here:
+                // window.location.href = 'cookie_settings.html';
+            });
+        });
+    </script>
+</body>
+</html>

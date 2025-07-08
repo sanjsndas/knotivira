@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service — Knotivira</title>
+    <style>
+        /* General Styles - Lighter Theme */
+        body {
+            font-family: 'Montserrat', sans-serif; /* A more modern, elegant font */
+            margin: 0;
+            padding: 0;
+            color: #333; /* Softer dark text */
+            background-color: #F8F8F8; /* Light gray for background */
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1000px; /* Slightly narrower for policy text readability */
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: #FFFFFF; /* Pure white */
+            padding: 15px 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08); /* Lighter shadow */
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif; /* Elegant font for logo */
+            font-size: 2.2em;
+            font-weight: bold;
+            color: #7A9B76; /* Softer Green */
+            text-decoration: none;
+            flex-shrink: 0;
+            margin-right: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #555; /* Slightly lighter text for nav */
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #CEB1A1; /* Softer Rose Gold */
+        }
+
+        /* Policy Content Styling */
+        section {
+            padding: 60px 0;
+            background-color: #F8F8F8;
+        }
+
+        section:nth-of-type(even) {
+            background-color: #FFFFFF;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5em;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #7A9B76;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+            color: #CEB1A1;
+            margin-top: 50px;
+            margin-bottom: 25px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8em;
+            color: #7A9B76;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        p {
+            margin-bottom: 1.2em;
+            line-height: 1.7;
+            font-size: 1.05em;
+            color: #444;
+        }
+
+        ul {
+            list-style: disc;
+            margin-left: 25px;
+            margin-bottom: 1.5em;
+            color: #444;
+        }
+
+        ul li {
+            margin-bottom: 0.8em;
+            line-height: 1.6;
+        }
+
+        strong {
+            color: #333;
+        }
+
+        a {
+            color: #CEB1A1;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #7A9B76;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #4A4A4A; /* Darker Gray */
+            color: #E0E0E0; /* Lighter text for footer */
+            padding: 50px 0;
+            text-align: center;
+            font-size: 0.85em;
+        }
+
+        footer .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        footer nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 25px 0;
+        }
+
+        footer nav ul li {
+            margin: 0 18px;
+        }
+
+        footer nav ul li a {
+            color: #E0E0E0;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer nav ul li a:hover {
+            color: #CEB1A1; /* Softer Rose Gold */
+        }
+
+        .footer-address {
+            margin-top: 25px;
+            margin-bottom: 30px;
+            line-height: 1.8;
+            color: #C0C0C0;
+        }
+
+        .disclaimer-text { /* Reusing this class for general footer text */
+            max-width: 900px;
+            margin: 0 auto 30px auto;
+            font-size: 0.8em;
+            line-height: 1.6;
+            color: #A0A0A0;
+            text-align: center; /* Center this text */
+            padding: 0; /* Remove padding if not a specific block */
+            background-color: transparent; /* Ensure transparent background */
+            border-radius: 0; /* Remove border-radius */
+        }
+
+        .disclaimer-text h3 {
+            color: #CEB1A1; /* Softer Rose Gold */
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul {
+                margin-top: 15px;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 8px 0;
+            }
+
+            h1 {
+                font-size: 2.5em;
+            }
+
+            h2 {
+                font-size: 2em;
+            }
+
+            h3 {
+                font-size: 1.5em;
+            }
+
+            .container {
+                padding: 15px;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">Knotivira</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="container">
+                <h1>Knotivira Terms of Service</h1>
+                <p><strong>Last Updated: July 5, 2025</strong></p>
+                <p>Welcome to Knotivira.com ("Site"), operated by Knotivira ("we," "our," or "us"). These Terms of Service ("Terms") govern your access to and use of the Knotivira website, including any content, functionality, and services offered on or through Knotivira.com. By accessing or using the Site, you signify your agreement to be bound by these Terms, our <a href="privacy.html">Privacy Policy</a>, and our <a href="cookies.html">Cookie Policy</a>, all of which are incorporated herein by reference. If you do not agree to these Terms, you must not access or use the Site. We encourage you to read these Terms carefully before using our services.</p>
+                <p>These Terms constitute a legally binding agreement between you and Knotivira. They apply to all visitors, users, and others who access or use the Service. Your continued use of the Site following the posting of revised Terms means that you accept and agree to the changes. We reserve the right to update, change, or replace any part of these Terms by posting updates and/or changes to our website. It is your responsibility to check this page periodically for changes. Your continued use of or access to the website following the posting of any changes constitutes acceptance of those changes.</p>
+
+                <h2>1. Definitions</h2>
+                <p>To ensure clarity and understanding throughout these Terms, the following definitions apply:</p>
+                <ul>
+                    <li><strong>"Site"</strong> refers to Knotivira.com and all associated web pages, subdomains, and applications.</li>
+                    <li><strong>"Service"</strong> refers collectively to the website, its content, products (physical and digital), patterns, tools, community features, and any other services provided by Knotivira.</li>
+                    <li><strong>"User," "You," "Your"</strong> refers to any individual or entity accessing or using the Site or Service.</li>
+                    <li><strong>"Knotivira," "We," "Our," "Us"</strong> refers to the operating entity of Knotivira.com.</li>
+                    <li><strong>"Products"</strong> refers to physical goods offered for sale on the Site, including but not limited to yarns, knitting needles, crochet hooks, project bags, and care products.</li>
+                    <li><strong>"Digital Products"</strong> refers to intangible goods offered for sale or download on the Site, primarily patterns, e-books, and digital workshops.</li>
+                    <li><strong>"Patterns"</strong> specifically refers to the knitting and crochet patterns, instructions, and schematics, whether sold individually or as part of a collection, in digital or physical format.</li>
+                    <li><strong>"Account"</strong> refers to a registered user profile created on the Site, allowing access to personalized features, order history, and community participation.</li>
+                    <li><strong>"User-Generated Content" (UGC)</strong> refers to any content, including text, images, videos, reviews, comments, forum posts, and project photos, submitted, posted, or displayed by Users on the Site.</li>
+                    <li><strong>"Intellectual Property Rights"</strong> refers to all patent rights, copyright rights, mask work rights, moral rights, rights of publicity, trademark, trade dress and service mark rights, goodwill, trade secret rights and other intellectual property rights as may now exist or hereafter come into existence, and all applications therefore and registrations, renewals and extensions thereof, under the laws of any state, country, territory or other jurisdiction.</li>
+                    <li><strong>"Privacy Policy"</strong> refers to Knotivira's policy regarding the collection, use, and disclosure of personal information, available at <a href="privacy.html">privacy.html</a>.</li>
+                    <li><strong>"Cookie Policy"</strong> refers to Knotivira's policy regarding the use of cookies and similar tracking technologies, available at <a href="cookies.html">cookies.html</a>.</li>
+                </ul>
+
+                <h2>2. Eligibility and Account Registration</h2>
+                <p>To access certain features of the Site, such as making purchases, participating in the Creator Collective, or saving wishlists, you may be required to register for an Account. By creating an Account, you agree to these Terms.</p>
+
+                <h3>2.1. Eligibility Requirements</h3>
+                <p>You must be at least 18 years of age or the age of majority in your jurisdiction to create an Account and make purchases on the Site. By using the Site, you represent and warrant that you meet this age requirement. If you are under 18 or the age of majority, you may only use the Site with the involvement and consent of a parent or legal guardian who agrees to be bound by these Terms.</p>
+                <p>You must also be legally capable of entering into a binding contract. By registering, you confirm that you have the legal capacity to enter into these Terms.</p>
+
+                <h3>2.2. Account Creation</h3>
+                <p>When you register for an Account, you agree to:</p>
+                <ul>
+                    <li>Provide accurate, current, and complete information as prompted by the registration form.</li>
+                    <li>Maintain and promptly update your Account information to keep it accurate, current, and complete.</li>
+                    <li>Maintain the security of your password and identification.</li>
+                    <li>Accept all risks of unauthorized access to your Account and the information you provide to us.</li>
+                </ul>
+                <p>Knotivira reserves the right to refuse service, terminate accounts, remove or edit content, or cancel orders in its sole discretion, including, without limitation, if Knotivira believes that your conduct violates applicable law or is harmful to the interests of Knotivira or its affiliates.</p>
+
+                <h3>2.3. Account Security</h3>
+                <p>You are solely responsible for maintaining the confidentiality of your Account password and for all activities that occur under your Account. You agree to notify Knotivira immediately of any unauthorized use of your password or Account or any other breach of security. Knotivira will not be liable for any loss or damage arising from your failure to comply with this section.</p>
+                <p>We implement security measures to protect your account, but you play a crucial role in maintaining its security. Never share your password, and consider using a strong, unique password that you do not use for other online services.</p>
+
+                <h2>3. Products and Services</h2>
+                <p>Knotivira offers a range of physical and digital products, as well as community features, designed to enhance your fiber arts experience. We strive to provide accurate descriptions and high-quality items.</p>
+
+                <h3>3.1. Product Descriptions</h3>
+                <p>We attempt to be as accurate as possible in the descriptions of our Products and Digital Products. However, Knotivira does not warrant that product descriptions or other content of this Site is accurate, complete, reliable, current, or error-free. All descriptions, images, references, features, content, specifications, products, and prices of products and services described or depicted on the Site are subject to change at any time without notice.</p>
+                <p>Colors may vary slightly from what appears online due to differences in monitor calibration, lighting conditions, and the inherent nature of natural fibers and hand-dyed yarns. We recommend referring to physical samples or contacting customer service if precise color matching is critical for your project.</p>
+
+                <h3>3.2. Pricing and Availability</h3>
+                <p>All prices for Products and Digital Products are listed in the currency specified on the Site and are subject to change without notice. Prices do not include applicable taxes, duties, shipping, or handling charges, which will be added to your total at checkout. We reserve the right to correct any errors in pricing or product descriptions and to cancel or refuse any order placed based on incorrect information.</p>
+                <p>Product availability is subject to change. While we endeavor to keep our inventory updated, there may be instances where an item you ordered is out of stock. In such cases, we will notify you promptly and offer alternatives, a backorder option, or a full refund for the unavailable item.</p>
+
+                <h3>3.3. Promotions and Offers</h3>
+                <p>From time to time, Knotivira may offer promotions, discounts, or special offers. These offers are subject to specific terms and conditions, which will be clearly communicated at the time of the promotion. Promotions are typically for a limited time and may not be combined with other offers unless explicitly stated. Knotivira reserves the right to modify or withdraw any promotion at any time.</p>
+
+                <h2>4. Orders and Payment</h2>
+                <p>This section outlines the process for placing orders and making payments on the Knotivira Site.</p>
+
+                <h3>4.1. Order Acceptance</h3>
+                <p>Your receipt of an electronic or other form of order confirmation does not signify our acceptance of your order, nor does it constitute confirmation of our offer to sell. Knotivira reserves the right at any time after receipt of your order to accept or decline your order for any reason. We may require additional verifications or information before accepting any order.</p>
+                <p>We reserve the right to refuse any order you place with us. We may, in our sole discretion, limit or cancel quantities purchased per person, per household, or per order. These restrictions may include orders placed by or under the same customer account, the same credit card, and/or orders that use the same billing and/or shipping address. In the event that we make a change to or cancel an order, we may attempt to notify you by contacting the email and/or billing address/phone number provided at the time the order was made.</p>
+
+                <h3>4.2. Payment Terms</h3>
+                <p>All payments must be made in full at the time of purchase. We accept various payment methods as indicated on the Site, which may include credit/debit cards (Visa, MasterCard, American Express, etc.), PayPal, and other digital payment options. By providing payment information, you represent and warrant that you are authorized to use the designated payment method and that you authorize us (or our third-party payment processor) to charge your payment method for the total amount of your order, including any applicable taxes, shipping, and handling fees.</p>
+                <p>Knotivira does not directly store your sensitive payment card information. All payment transactions are processed through secure, PCI-DSS compliant third-party payment gateways. Your payment information is encrypted and transmitted directly to these processors. While these processors use industry-standard security measures, Knotivira cannot be held responsible for any security breaches or unauthorized access to your payment information that occurs at the third-party payment processor's end.</p>
+
+                <h3>4.3. Billing Accuracy</h3>
+                <p>You agree to provide current, complete, and accurate purchase and account information for all purchases made at our store. You agree to promptly update your account and other information, including your email address and credit card numbers and expiration dates, so that we can complete your transactions and contact you as needed.</p>
+
+                <h2>5. Shipping and Delivery</h2>
+                <p>This section outlines our policies regarding the shipping and delivery of physical products purchased from Knotivira.</p>
+
+                <h3>5.1. Shipping Destinations</h3>
+                <p>Knotivira ships to various domestic and international destinations. Available shipping options and estimated delivery times will be presented at checkout based on your location. Please note that certain remote areas or countries may have limited shipping options or incur additional charges.</p>
+
+                <h3>5.2. Shipping Costs</h3>
+                <p>Shipping costs are calculated based on the weight, dimensions, destination, and chosen shipping method of your order. These costs will be clearly displayed during the checkout process before you finalize your purchase. From time to time, we may offer free shipping promotions, which will be subject to specific terms and conditions.</p>
+
+                <h3>5.3. Estimated Delivery Times</h3>
+                <p>Estimated delivery times are provided for your convenience and are not guaranteed. These estimates are based on typical shipping carrier performance and do not account for unforeseen delays such as customs processing, adverse weather conditions, or carrier disruptions. Knotivira is not responsible for delays in shipping or delivery due to circumstances beyond our reasonable control.</p>
+
+                <h3>5.4. Order Processing Time</h3>
+                <p>Most orders for physical products are processed and shipped within [X] business days (e.g., 1-3 business days) of order placement, excluding weekends and public holidays. You will receive a shipping confirmation email with tracking information once your order has been dispatched.</p>
+
+                <h3>5.5. Customs, Duties, and Taxes (International Orders)</h3>
+                <p>For international orders, you are responsible for any customs duties, taxes, tariffs, or other fees imposed by the destination country. These charges are not included in the product price or shipping cost and are the sole responsibility of the recipient. Knotivira has no control over these charges and cannot predict what they may be. We recommend contacting your local customs office for more information before placing an international order.</p>
+
+                <h3>5.6. Risk of Loss</h3>
+                <p>The risk of loss and title for items purchased from Knotivira pass to you upon our delivery to the carrier. This means that once the package leaves our facility and is in the hands of the shipping carrier, you are responsible for any loss or damage to the items. We recommend purchasing shipping insurance if you are concerned about potential loss or damage during transit.</p>
+
+                <h3>5.7. Incorrect Shipping Information</h3>
+                <p>It is your responsibility to provide accurate and complete shipping information at the time of purchase. Knotivira is not responsible for delays, non-delivery, or additional shipping charges incurred due to incorrect or incomplete address details provided by the user. If a package is returned to us due to an incorrect address, you may be responsible for re-shipping fees.</p>
+
+                <h2>6. Returns, Refunds, and Exchanges</h2>
+                <p>Knotivira is committed to your satisfaction. This section outlines our policy for returns, refunds, and exchanges for physical products.</p>
+
+                <h3>6.1. Return Eligibility</h3>
+                <p>You may return most new, unopened physical products within [X] days (e.g., 30 days) of delivery for a full refund or exchange, provided they meet the following conditions:</p>
+                <ul>
+                    <li>The item must be unused, unwashed, and in its original condition.</li>
+                    <li>Yarn must be in its original skein or ball form, unwound, and with all labels intact.</li>
+                    <li>Tools and accessories must be in their original packaging and show no signs of use or damage.</li>
+                    <li>The return must be accompanied by the original proof of purchase (order number or receipt).</li>
+                    <li>Items marked as "final sale" or "non-returnable" are not eligible for return or exchange.</li>
+                </ul>
+                <p>Please note that Digital Products (patterns, e-books, workshop access) are generally non-refundable once downloaded or accessed, due to their intangible nature. Please see section 7 for specific terms regarding Digital Products.</p>
+
+                <h3>6.2. Return Process</h3>
+                <p>To initiate a return or exchange, please contact our customer service team at [customer service email] within the eligible return period. You will be provided with instructions on how to return your item(s). You will typically be responsible for the cost of return shipping, unless the return is due to an error on our part (e.g., wrong item shipped, defective product).</p>
+                <p>We recommend using a trackable shipping service and purchasing shipping insurance when returning items, as we cannot guarantee that we will receive your returned item.</p>
+
+                <h3>6.3. Refunds</h3>
+                <p>Once your return is received and inspected, we will send you an email notification regarding the approval or rejection of your refund. If approved, your refund will be processed, and a credit will automatically be applied to your original method of payment within [X] business days (e.g., 7-10 business days). Shipping costs from the original order are non-refundable, unless the return is due to our error.</p>
+                <p>If you haven’t received a refund yet, first check your bank account again. Then contact your credit card company, it may take some time before your refund is officially posted. Next contact your bank. There is often some processing time before a refund is posted. If you’ve done all of this and you still have not received your refund yet, please contact us at [customer service email].</p>
+
+                <h3>6.4. Exchanges</h3>
+                <p>If you wish to exchange an item, please follow the return process for the original item and place a new order for the desired item. This ensures that the new item is in stock and can be shipped promptly. If the exchange is due to our error, we will cover the shipping costs for both the return and the new shipment.</p>
+
+                <h3>6.5. Damaged or Defective Items</h3>
+                <p>If you receive a damaged or defective item, please contact us immediately (within [X] days of delivery) with details of the defect and photographic evidence. We will work with you to resolve the issue, which may include sending a replacement, offering a refund, or providing a store credit, at our discretion. Do not return damaged or defective items without prior authorization from our customer service team.</p>
+
+                <h2>7. Digital Products and Patterns</h2>
+                <p>This section outlines specific terms related to the purchase and use of Digital Products, primarily knitting and crochet patterns, from Knotivira.</p>
+
+                <h3>7.1. Nature of Digital Products</h3>
+                <p>Digital Products, such as patterns, e-books, and digital workshop access, are intangible goods delivered electronically. Once a Digital Product has been downloaded or accessed, it cannot be returned or exchanged. Therefore, all sales of Digital Products are final and non-refundable, except where required by law or in cases of demonstrable technical error preventing access to the product.</p>
+
+                <h3>7.2. Licensing and Permitted Use of Patterns</h3>
+                <p>When you purchase or download a Pattern from Knotivira, you are granted a limited, non-exclusive, non-transferable, revocable license to use the Pattern for your personal, non-commercial use only. This means:</p>
+                <ul>
+                    <li>You may download and print a copy of the Pattern for your personal use.</li>
+                    <li>You may create physical items (e.g., knitted or crocheted garments, accessories, home decor) from the Pattern for your personal use or as gifts.</li>
+                    <li>You may sell a limited number of finished items made from Knotivira Patterns on a small-scale, handmade basis, provided that you clearly credit "Knotivira" as the pattern designer in your product description. This "small-scale, handmade basis" typically refers to individual crafters selling items directly to consumers, not mass production or factory manufacturing.</li>
+                </ul>
+                <p>You are expressly prohibited from:</p>
+                <ul>
+                    <li>Sharing, distributing, selling, reselling, reproducing, publishing, or otherwise making the Pattern available to others, whether in digital or physical form, without explicit written permission from Knotivira.</li>
+                    <li>Modifying, adapting, translating, reverse engineering, decompiling, or disassembling any part of the Pattern, except as necessary for your personal use in creating the physical item.</li>
+                    <li>Using the Pattern for large-scale commercial production or manufacturing without a separate commercial licensing agreement with Knotivira.</li>
+                    <li>Claiming the Pattern as your own design or removing any copyright notices or branding from the Pattern.</li>
+                    <li>Using the Pattern to create derivative digital products (e.g., translating the pattern into another language and selling it, or creating a new digital pattern based heavily on ours).</li>
+                </ul>
+                <p>Violation of these licensing terms constitutes a breach of these Terms and may result in the termination of your Account and legal action for copyright infringement.</p>
+
+                <h3>7.3. Access to Digital Products</h3>
+                <p>Upon successful purchase, Digital Products will typically be available for immediate download via a link provided on the order confirmation page and/or sent to your registered email address. You may also be able to access your purchased Digital Products through your Knotivira Account dashboard. It is your responsibility to download and save your Digital Products promptly after purchase. Knotivira is not responsible for lost files once they have been successfully delivered and downloaded.</p>
+
+                <h2>8. User-Generated Content (UGC)</h2>
+                <p>Knotivira encourages community engagement through features like the Creator Collective, product reviews, and comments. This section outlines the terms governing User-Generated Content.</p>
+
+                <h3>8.1. Responsibility for UGC</h3>
+                <p>You are solely responsible for any UGC that you submit, post, or display on the Site. By submitting UGC, you represent and warrant that:</p>
+                <ul>
+                    <li>You are the sole author and owner of the intellectual property rights in the UGC, or you have all necessary licenses, rights, consents, and permissions to publish the UGC and to grant Knotivira the rights described herein.</li>
+                    <li>Your UGC does not infringe upon, misappropriate, or violate the intellectual property rights, privacy rights, publicity rights, or any other rights of any third party.</li>
+                    <li>Your UGC does not contain any material that is unlawful, harmful, defamatory, obscene, harassing, threatening, abusive, hateful, or otherwise objectionable.</li>
+                    <li>Your UGC does not contain any computer viruses, worms, or other potentially damaging computer programs or files.</li>
+                    <li>Your UGC complies with all applicable laws and regulations.</li>
+                </ul>
+
+                <h3>8.2. License Grant to Knotivira</h3>
+                <p>By submitting UGC to the Site, you grant Knotivira a worldwide, non-exclusive, royalty-free, fully paid, transferable, and sublicensable license to use, reproduce, distribute, prepare derivative works of, display, and perform the UGC in connection with the Service and Knotivira's (and its successors' and affiliates') business, including without limitation for promoting and redistributing part or all of the Service (and derivative works thereof) in any media formats and through any media channels. This license includes, but is not limited to, the right to use your UGC in our marketing materials, social media posts, newsletters, and on other pages of our Site.</p>
+                <p>You also grant each User of the Service a non-exclusive license to access your UGC through the Service, and to use, reproduce, distribute, display, and perform such UGC as permitted through the functionality of the Service and under these Terms.</p>
+                <p>This license continues even if you stop using the Service, unless you specifically request deletion of your UGC where such deletion is feasible and not subject to legal retention requirements.</p>
+
+                <h3>8.3. Content Standards</h3>
+                <p>All UGC must comply with the following content standards:</p>
+                <ul>
+                    <li>It must be accurate (where it states facts) and genuinely held (where it states opinions).</li>
+                    <li>It must not contain any material which is defamatory of any person, obscene, offensive, hateful or inflammatory.</li>
+                    <li>It must not promote sexually explicit material, violence, or discrimination based on race, sex, religion, nationality, disability, sexual orientation, or age.</li>
+                    <li>It must not infringe any copyright, database right, or trademark of any other person.</li>
+                    <li>It must not be likely to deceive any person.</li>
+                    <li>It must not be made in breach of any legal duty owed to a third party, such as a contractual duty or a duty of confidence.</li>
+                    <li>It must not promote any illegal activity.</li>
+                    <li>It must not be threatening, abuse or invade another's privacy, or cause annoyance, inconvenience, or needless anxiety.</li>
+                    <li>It must not be likely to harass, upset, embarrass, alarm, or annoy any other person.</li>
+                    <li>It must not be used to impersonate any person, or to misrepresent your identity or affiliation with any person.</li>
+                    <li>It must not give the impression that it emanates from Knotivira, if this is not the case.</li>
+                    <li>It must not advocate, promote, or assist any unlawful act such as (by way of example only) copyright infringement or computer misuse.</li>
+                </ul>
+
+                <h3>8.4. Monitoring and Removal of UGC</h3>
+                <p>Knotivira reserves the right, but is not obligated, to monitor, edit, or remove any UGC at its sole discretion, without notice, for any reason, including if we believe that the UGC violates these Terms or is otherwise objectionable. We are not responsible for any failure or delay in removing such content. We may also take any action with respect to any UGC that we deem necessary or appropriate in our sole discretion, including referring to law enforcement authorities.</p>
+
+                <h2>9. Intellectual Property Rights</h2>
+                <p>All content on the Knotivira Site, including text, graphics, logos, button icons, images, audio clips, digital downloads, data compilations, and software, as well as the compilation of all content on this Site, is the exclusive property of Knotivira or its content suppliers and protected by international copyright, trademark, patent, trade secret, and other intellectual property or proprietary rights laws.</p>
+
+                <h3>9.1. Knotivira Content</h3>
+                <p>The Knotivira name, logo, and all related names, logos, product and service names, designs, and slogans are trademarks of Knotivira or its affiliates or licensors. You must not use such marks without the prior written permission of Knotivira.</p>
+                <p>All other names, logos, product and service names, designs, and slogans on this Site are the trademarks of their respective owners. Nothing in these Terms grants you a right to use any trademark, service mark, logo, or trade name of Knotivira or any third party.</p>
+
+                <h3>9.2. Digital Products (Patterns)</h3>
+                <p>As detailed in Section 7.2, Patterns and other Digital Products remain the intellectual property of Knotivira or its designers. Your purchase grants you a limited license, not ownership. Any unauthorized reproduction, distribution, or commercial use of Patterns is strictly prohibited and will be subject to legal action.</p>
+
+                <h3>9.3. Reporting Infringement</h3>
+                <p>If you believe that any content on the Site infringes your copyright or other intellectual property rights, please contact us immediately at [copyright infringement email] with the following information:</p>
+                <ul>
+                    <li>A description of the copyrighted work or intellectual property that you claim has been infringed.</li>
+                    <li>A description of where the material that you claim is infringing is located on the Site.</li>
+                    <li>Your address, telephone number, and email address.</li>
+                    <li>A statement by you that you have a good faith belief that the disputed use is not authorized by the copyright owner, its agent, or the law.</li>
+                    <li>A statement by you, made under penalty of perjury, that the above information in your notice is accurate and that you are the copyright owner or authorized to act on the copyright owner's behalf.</li>
+                </ul>
+
+                <h2>10. Prohibited Uses</h2>
+                <p>You may use the Site only for lawful purposes and in accordance with these Terms. You agree not to use the Site:</p>
+                <ul>
+                    <li>In any way that violates any applicable federal, state, local, or international law or regulation (including, without limitation, any laws regarding the export of data or software to and from India or other countries).</li>
+                    <li>For the purpose of exploiting, harming, or attempting to exploit or harm minors in any way by exposing them to inappropriate content, asking for personally identifiable information, or otherwise.</li>
+                    <li>To transmit, or procure the sending of, any advertising or promotional material, including any "junk mail," "chain letter," "spam," or any other similar solicitation.</li>
+                    <li>To impersonate or attempt to impersonate Knotivira, a Knotivira employee, another user, or any other person or entity (including, without limitation, by using email addresses or screen names associated with any of the foregoing).</li>
+                    <li>To engage in any other conduct that restricts or inhibits anyone's use or enjoyment of the Site, or which, as determined by us, may harm Knotivira or users of the Site or expose them to liability.</li>
+                </ul>
+                <p>Additionally, you agree not to:</p>
+                <ul>
+                    <li>Use the Site in any manner that could disable, overburden, damage, or impair the site or interfere with any other party's use of the Site, including their ability to engage in real-time activities through the Site.</li>
+                    <li>Use any robot, spider, or other automatic device, process, or means to access the Site for any purpose, including monitoring or copying any of the material on the Site.</li>
+                    <li>Use any manual process to monitor or copy any of the material on the Site or for any other unauthorized purpose without our prior written consent.</li>
+                    <li>Use any device, software, or routine that interferes with the proper working of the Site.</li>
+                    <li>Introduce any viruses, Trojan horses, worms, logic bombs, or other material that is malicious or technologically harmful.</li>
+                    <li>Attempt to gain unauthorized access to, interfere with, damage, or disrupt any parts of the Site, the server on which the Site is stored, or any server, computer, or database connected to the Site.</li>
+                    <li>Attack the Site via a denial-of-service attack or a distributed denial-of-service attack.</li>
+                    <li>Otherwise attempt to interfere with the proper working of the Site.</li>
+                </ul>
+
+                <h2>11. Disclaimer of Warranties</h2>
+                <p>Your use of the Site, its content, and any services or items obtained through the Site is at your own risk. The Site, its content, and any services or items obtained through the Site are provided on an "as is" and "as available" basis, without any warranties of any kind, either express or implied.</p>
+                <p>Knotivira hereby disclaims all warranties of any kind, whether express or implied, statutory, or otherwise, including but not limited to any warranties of merchantability, non-infringement, and fitness for particular purpose.</p>
+                <p>Neither Knotivira nor any person associated with Knotivira makes any warranty or representation with respect to the completeness, security, reliability, quality, accuracy, or availability of the Site. Without limiting the foregoing, neither Knotivira nor anyone associated with Knotivira represents or warrants that the Site, its content, or any services or items obtained through the Site will be accurate, reliable, error-free, or uninterrupted, that defects will be corrected, that our Site or the server that makes it available are free of viruses or other harmful components, or that the Site or any services or items obtained through the Site will otherwise meet your needs or expectations.</p>
+                <p>The foregoing does not affect any warranties which cannot be excluded or limited under applicable law.</p>
+
+                <h2>12. Limitation of Liability</h2>
+                <p>To the fullest extent permitted by law, in no event will Knotivira, its affiliates, or their licensors, service providers, employees, agents, officers, or directors be liable for damages of any kind, under any legal theory, arising out of or in connection with your use, or inability to use, the Site, any websites linked to it, any content on the Site or such other websites, including any direct, indirect, special, incidental, consequential, or punitive damages, including but not limited to, personal injury, pain and suffering, emotional distress, loss of revenue, loss of profits, loss of business or anticipated savings, loss of use, loss of goodwill, loss of data, and whether caused by tort (including negligence), breach of contract, or otherwise, even if foreseeable.</p>
+                <p>The foregoing does not affect any liability which cannot be excluded or limited under applicable law. In no event shall Knotivira's total liability to you for all damages, losses, and causes of action whether in contract, tort (including, but not limited to, negligence), or otherwise, exceed the amount paid by you, if any, for accessing or using the Site or purchasing products or services through the Site during the twelve (12) months immediately preceding the date of the claim.</p>
+
+                <h2>13. Indemnification</h2>
+                <p>You agree to defend, indemnify, and hold harmless Knotivira, its affiliates, licensors, and service providers, and its and their respective officers, directors, employees, contractors, agents, licensors, suppliers, successors, and assigns from and against any claims, liabilities, damages, judgments, awards, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising out of or relating to your violation of these Terms or your use of the Site, including, but not limited to, your User-Generated Content, any use of the Site's content, services, and products other than as expressly authorized in these Terms, or your use of any information obtained from the Site.</p>
+
+                <h2>14. Governing Law and Jurisdiction</h2>
+                <p>All matters relating to the Site and these Terms, and any dispute or claim arising therefrom or related thereto (in each case, including non-contractual disputes or claims), shall be governed by and construed in accordance with the internal laws of India without giving effect to any choice or conflict of law provision or rule. Specifically, the laws of Delhi, India, shall apply.</p>
+                <p>Any legal suit, action, or proceeding arising out of, or related to, these Terms or the Site shall be instituted exclusively in the courts of Delhi, India, although we retain the right to bring any suit, action, or proceeding against you for breach of these Terms in your country of residence or any other relevant country. You waive any and all objections to the exercise of jurisdiction over you by such courts and to venue in such courts.</p>
+
+                <h2>15. Dispute Resolution</h2>
+                <p>In the event of any dispute, controversy, or claim arising out of or relating to these Terms or your use of the Site, the parties agree to first attempt to resolve the dispute informally and in good faith. This informal resolution process may include direct communication between the parties to discuss and negotiate a settlement.</p>
+                <p>If the parties are unable to resolve the dispute informally within a reasonable period (e.g., 30 days), either party may elect to pursue binding arbitration as the sole and exclusive means of resolving disputes, subject to the provisions below. The arbitration shall be conducted in accordance with the provisions of the Arbitration and Conciliation Act, 1996 (as amended) of India.</p>
+
+                <h3>15.1. Binding Arbitration</h3>
+                <p>All claims and disputes arising under or relating to these Terms are to be settled by binding arbitration in Delhi, India, or another location mutually agreed upon by the parties. The arbitration shall be administered by a single arbitrator appointed in accordance with the rules of a recognized arbitration institution in India (e.g., the Delhi International Arbitration Centre or Indian Council of Arbitration). The decision of the arbitrator shall be final and binding on both parties.</p>
+                <p>The arbitration shall be conducted in English. The costs of the arbitration, including the arbitrator's fees and administrative expenses, shall be shared equally by both parties, unless the arbitrator determines otherwise. Each party shall bear its own legal fees and expenses incurred in connection with the arbitration.</p>
+
+                <h3>15.2. Exceptions to Arbitration</h3>
+                <p>Notwithstanding the foregoing, either party may seek injunctive or other equitable relief in a court of competent jurisdiction to prevent the actual or threatened infringement, misappropriation, or violation of a party's copyrights, trademarks, trade secrets, patents, or other intellectual property rights.</p>
+                <p>Furthermore, nothing in this section shall be construed to prevent Knotivira from seeking relief in any court of competent jurisdiction for claims related to the collection of payment for products or services, or for claims related to your breach of the "Prohibited Uses" section of these Terms.</p>
+
+                <h3>15.3. Class Action Waiver</h3>
+                <p>YOU AGREE THAT YOU MAY BRING CLAIMS AGAINST KNOTIVIRA ONLY IN YOUR INDIVIDUAL CAPACITY AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS OR REPRESENTATIVE PROCEEDING. Unless both you and Knotivira agree otherwise, the arbitrator may not consolidate more than one person's claims, and may not otherwise preside over any form of a representative or class proceeding.</p>
+
+                <h2>16. Termination</h2>
+                <p>We may terminate or suspend your Account and bar access to the Service immediately, without prior notice or liability, under our sole discretion, for any reason whatsoever and without limitation, including but not limited to a breach of the Terms.</p>
+                <p>If you wish to terminate your Account, you may simply discontinue using the Service or contact us to request account deletion. Upon termination, your right to use the Service will immediately cease.</p>
+                <p>All provisions of the Terms which by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity, and limitations of liability.</p>
+                <p>Knotivira reserves the right to suspend or terminate your access to the Site or any part thereof, at any time, without notice, for any reason, including but not limited to, a breach of these Terms. We may also, at our sole discretion, discontinue providing the Site or any part thereof, with or without notice.</p>
+
+                <h2>17. Third-Party Links</h2>
+                <p>Our Site may contain links to websites or services that are not owned or controlled by Knotivira. For example, we may link to yarn manufacturers, independent pattern designers, crafting communities, or educational resources. These links are provided for your convenience and information only.</p>
+                <p>Knotivira has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third-party websites or services. We do not warrant the offerings of any of these entities/individuals or their websites. You acknowledge and agree that Knotivira shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods, or services available on or through any such third-party web sites or services.</p>
+                <p>We strongly advise you to read the terms and conditions and privacy policies of any third-party websites or services that you visit. Your interaction with any third-party website linked from our Site is solely at your own risk.</p>
+
+                <h2>18. Changes to Terms and Conditions</h2>
+                <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.</p>
+                <p>By continuing to access or use our Service after any revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, you are no longer authorized to use the Service.</p>
+                <p>We encourage you to review these Terms periodically for any changes. The "Last Updated" date at the top of this page will indicate when the Terms were last revised. Your continued use of the Site after any changes indicates your acceptance of the revised Terms.</p>
+
+                <h2>19. Severability</h2>
+                <p>If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect. The invalid or unenforceable provision will be replaced by a valid and enforceable provision that most closely matches the intent of the original provision.</p>
+                <p>Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If Knotivira does not insist immediately that you do anything you are required to do under these Terms, or if we delay in taking steps against you in respect of your breaking these Terms, that will not mean that you do not have to do those things and it will not prevent us taking steps against you at a later date.</p>
+
+                <h2>20. Entire Agreement</h2>
+                <p>These Terms, together with the <a href="privacy.html">Privacy Policy</a> and <a href="cookies.html">Cookie Policy</a>, constitute the entire agreement between you and Knotivira regarding your use of the Site and supersede all prior and contemporaneous understandings, agreements, representations, and warranties, both written and oral, regarding the Site.</p>
+
+                <h2>21. Contact Information</h2>
+                <p>If you have any questions about these Terms of Service, please contact us:</p>
+                <ul>
+                    <li><strong>By Email:</strong> legal@knotivira.com</li>
+                    <li><strong>By Mail:</strong><br>Knotivira Headquarters<br>Legal Department<br>123 Yarn Weaver Lane, Creative City, State 12345, India</li>
+                    <li><strong>Through our Website:</strong> Visit our <a href="contact.html">Contact Us</a> page for a direct inquiry form.</li>
+                </ul>
+                <p>We are committed to addressing your concerns and appreciate your understanding and cooperation in adhering to these Terms of Service, which are designed to ensure a fair and secure environment for all members of the Knotivira community.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="cookies.html">Cookie Policy</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="footer-address">
+                <p>Knotivira Headquarters</p>
+                <p>123 Yarn Weaver Lane, Creative City, State 12345, India</p>
+                <p>Email: info@knotivira.com | Phone: +91 98765 43210</p>
+            </div>
+            <div class="disclaimer-text">
+                <p>&copy; 2025 Knotivira. All rights reserved. "The Art of Yarn. Elevated."</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

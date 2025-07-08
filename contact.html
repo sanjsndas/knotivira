@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us — Knotivira</title>
+    <style>
+        /* General Styles - Lighter Theme */
+        body {
+            font-family: 'Montserrat', sans-serif; /* A more modern, elegant font */
+            margin: 0;
+            padding: 0;
+            color: #333; /* Softer dark text */
+            background-color: #F8F8F8; /* Light gray for background */
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 900px; /* Adjusted for contact form layout */
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: #FFFFFF; /* Pure white */
+            padding: 15px 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08); /* Lighter shadow */
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif; /* Elegant font for logo */
+            font-size: 2.2em;
+            font-weight: bold;
+            color: #7A9B76; /* Softer Green */
+            text-decoration: none;
+            flex-shrink: 0;
+            margin-right: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #555; /* Slightly lighter text for nav */
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #CEB1A1; /* Softer Rose Gold */
+        }
+
+        /* Contact Content Styling */
+        section {
+            padding: 60px 0;
+            background-color: #F8F8F8;
+        }
+
+        section:nth-of-type(even) {
+            background-color: #FFFFFF;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5em;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #7A9B76;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+            color: #CEB1A1;
+            margin-top: 50px;
+            margin-bottom: 25px;
+            text-align: center; /* Center for main sections */
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8em;
+            color: #7A9B76;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            text-align: left; /* Align left for sub-sections */
+        }
+
+        p {
+            margin-bottom: 1.2em;
+            line-height: 1.7;
+            font-size: 1.05em;
+            color: #444;
+        }
+
+        ul {
+            list-style: disc;
+            margin-left: 25px;
+            margin-bottom: 1.5em;
+            color: #444;
+        }
+
+        ul li {
+            margin-bottom: 0.8em;
+            line-height: 1.6;
+        }
+
+        strong {
+            color: #333;
+        }
+
+        a {
+            color: #CEB1A1;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #7A9B76;
+        }
+
+        /* Contact Form Specific Styles */
+        .contact-form-container {
+            background-color: #FFFFFF;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            margin-top: 40px;
+        }
+
+        .contact-form-container label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #555;
+        }
+
+        .contact-form-container input[type="text"],
+        .contact-form-container input[type="email"],
+        .contact-form-container textarea {
+            width: calc(100% - 20px); /* Adjust for padding */
+            padding: 12px 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1em;
+            color: #333;
+            box-sizing: border-box; /* Include padding in width */
+            transition: border-color 0.3s ease;
+        }
+
+        .contact-form-container input[type="text"]:focus,
+        .contact-form-container input[type="email"]:focus,
+        .contact-form-container textarea:focus {
+            border-color: #7A9B76; /* Softer Green on focus */
+            outline: none;
+        }
+
+        .contact-form-container textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .contact-form-container button {
+            background-color: #7A9B76; /* Softer Green */
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            display: block; /* Make button full width */
+            width: 100%;
+        }
+
+        .contact-form-container button:hover {
+            background-color: #CEB1A1; /* Softer Rose Gold on hover */
+            transform: translateY(-2px);
+        }
+
+        .contact-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .contact-info-item {
+            background-color: #FFFFFF;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+        }
+
+        .contact-info-item h3 {
+            margin-top: 0;
+            text-align: center;
+            color: #CEB1A1;
+        }
+
+        .contact-info-item p {
+            font-size: 0.95em;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        /* Map Section */
+        .map-container {
+            margin-top: 60px;
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+            text-align: center;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 400px;
+            border: 0;
+            border-radius: 4px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #4A4A4A; /* Darker Gray */
+            color: #E0E0E0; /* Lighter text for footer */
+            padding: 50px 0;
+            text-align: center;
+            font-size: 0.85em;
+        }
+
+        footer .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        footer nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 25px 0;
+        }
+
+        footer nav ul li {
+            margin: 0 18px;
+        }
+
+        footer nav ul li a {
+            color: #E0E0E0;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer nav ul li a:hover {
+            color: #CEB1A1; /* Softer Rose Gold */
+        }
+
+        .footer-address {
+            margin-top: 25px;
+            margin-bottom: 30px;
+            line-height: 1.8;
+            color: #C0C0C0;
+        }
+
+        .disclaimer-text { /* Reusing this class for general footer text */
+            max-width: 900px;
+            margin: 0 auto 30px auto;
+            font-size: 0.8em;
+            line-height: 1.6;
+            color: #A0A0A0;
+            text-align: center; /* Center this text */
+            padding: 0; /* Remove padding if not a specific block */
+            background-color: transparent; /* Ensure transparent background */
+            border-radius: 0; /* Remove border-radius */
+        }
+
+        .disclaimer-text h3 {
+            color: #CEB1A1; /* Softer Rose Gold */
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul {
+                margin-top: 15px;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 8px 0;
+            }
+
+            h1 {
+                font-size: 2.5em;
+            }
+
+            h2 {
+                font-size: 2em;
+            }
+
+            h3 {
+                font-size: 1.5em;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            .contact-form-container {
+                padding: 25px;
+            }
+
+            .contact-info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">Knotivira</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="container">
+                <h1>Contact Knotivira</h1>
+                <p style="text-align: center; max-width: 700px; margin: 0 auto 40px auto;">We're here to assist you with any questions, feedback, or support you may need. Whether it's about our luxury yarns, exclusive patterns, or your order, our dedicated team is ready to help. Your creative journey is important to us!</p>
+
+                <h2>Send Us a Message</h2>
+                <div class="contact-form-container">
+                    <form action="#" method="POST">
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+
+                        <label for="email">Your Email:</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email address">
+
+                        <label for="subject">Subject:</label>
+                        <input type="text" id="subject" name="subject" required placeholder="Briefly describe your inquiry">
+
+                        <label for="message">Your Message:</label>
+                        <textarea id="message" name="message" required placeholder="Type your detailed message here..."></textarea>
+
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+
+                <h2>Other Ways to Connect</h2>
+                <div class="contact-info-grid">
+                    <div class="contact-info-item">
+                        <h3>Email Us</h3>
+                        <p>For general inquiries, support, or feedback, please reach out to us via email. We aim to respond within 1-2 business days.</p>
+                        <p><strong><a href="mailto:info@knotivira.com">info@knotivira.com</a></strong></p>
+                    </div>
+                    <div class="contact-info-item">
+                        <h3>Call Us</h3>
+                        <p>For urgent matters or direct assistance, you can call our customer support line during business hours (Monday - Friday, 9 AM - 5 PM IST).</p>
+                        <p><strong>+91 98765 43210</strong></p>
+                    </div>
+                    <div class="contact-info-item">
+                        <h3>Visit Our Headquarters</h3>
+                        <p>Our main office is located in Creative City. Please note, visits are by appointment only.</p>
+                        <p><strong>Knotivira Headquarters<br>123 Yarn Weaver Lane<br>Creative City, State 12345<br>India</strong></p>
+                    </div>
+                </div>
+
+                <div class="map-container">
+                    <h2>Find Us on the Map</h2>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.584903333333!2d77.2210875149303!3d28.61393998242491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd1796d7f9d9%3A0x1a2b3c4d5e6f7a8b!2sConnaught%20Place!5e0!3m2!1sen!2sin!4v1678901234567!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+                    <p style="margin-top: 20px; font-size: 0.9em; color: #666;">Note: The map shows a central location in Delhi for illustrative purposes. Our actual headquarters address is provided above.</p>
+                </div>
+
+                <h2>Frequently Asked Questions & Support</h2>
+                <p style="text-align: center; max-width: 700px; margin: 0 auto 20px auto;">Before reaching out, you might find answers to common questions in our dedicated resources:</p>
+                <ul style="list-style: none; padding: 0; text-align: center;">
+                    <li style="display: inline-block; margin: 0 15px 10px;"><a href="index.html#journal" style="font-weight: bold; color: #7A9B76;">Visit The Journal (FAQs & Guides)</a></li>
+                    <li style="display: inline-block; margin: 0 15px 10px;"><a href="index.html#creator-collective" style="font-weight: bold; color: #7A9B76;">Join the Creator Collective (Community Support)</a></li>
+                    <li style="display: inline-block; margin: 0 15px 10px;"><a href="index.html#why-different" style="font-weight: bold; color: #7A9B76;">Learn About Knotivira (Our Philosophy)</a></li>
+                </ul>
+
+                <h2 style="margin-top: 60px;">What Happens After You Contact Us?</h2>
+                <p>When you submit an inquiry through our contact form or via email, our customer support team receives your message. We prioritize all communications and strive to provide a thoughtful and comprehensive response as quickly as possible. Here’s what you can expect:</p>
+                <ul>
+                    <li><strong>Confirmation:</strong> You will typically receive an automated confirmation email acknowledging receipt of your message. This email will include a reference number for your inquiry, which you can use if you need to follow up.</li>
+                    <li><strong>Initial Review:</strong> Our team will review your message to understand the nature of your request. This helps us direct your inquiry to the most appropriate specialist within Knotivira, whether it's related to an order, a product detail, a pattern question, or a technical issue.</li>
+                    <li><strong>Personalized Response:</strong> We aim to provide a personalized response rather than generic automated replies. Our goal is to address your specific concerns with accuracy and care. Depending on the complexity of your question, this might involve a direct answer, a request for more information, or a redirection to a more suitable resource on our Site.</li>
+                    <li><strong>Response Time:</strong> We typically respond to all inquiries within 1-2 business days. During peak periods or for highly complex issues, our response time might be slightly longer, but we will always endeavor to keep you informed if there are significant delays. Our business hours are Monday to Friday, 9 AM to 5 PM IST, excluding public holidays. Inquiries received outside these hours will be addressed on the next business day.</li>
+                    <li><strong>Resolution:</strong> Our team will work diligently to resolve your issue or answer your question to your satisfaction. This may involve multiple exchanges of communication to ensure all aspects of your inquiry are thoroughly addressed. We are committed to finding solutions that meet your needs and enhance your Knotivira experience.</li>
+                    <li><strong>Feedback Loop:</strong> After your inquiry is resolved, we may occasionally send a brief survey to gather your feedback on our support service. Your input is invaluable in helping us continuously improve our customer care and ensure we are meeting your expectations.</li>
+                </ul>
+                <p>We understand that effective communication is key to a positive customer experience. Our customer support team is comprised of passionate individuals who are not only knowledgeable about our products and the fiber arts but are also dedicated to providing empathetic and efficient assistance. We believe that every interaction is an opportunity to strengthen our relationship with you, our valued customer. Your trust in Knotivira is something we earn through consistent quality in our products and our service.</p>
+                <p>For urgent matters related to an existing order (e.g., incorrect address, immediate cancellation request), we recommend calling our customer support line during business hours for the fastest resolution. For less urgent inquiries, email or the contact form are excellent options, allowing you to provide detailed information at your convenience.</p>
+                <p>We also encourage you to explore our <a href="index.html#journal">Journal</a> section, which contains a wealth of articles, guides, and FAQs that might already answer your questions about fiber history, techniques, product care, and sustainability. Our <a href="index.html#creator-collective">Creator Collective</a> is another fantastic resource, where you can connect with fellow fiber artists, share experiences, and potentially find answers to your crafting-related queries from a supportive community.</p>
+                <p>Your privacy is important to us. Any personal information you provide through this contact form or via email will be handled in accordance with our <a href="privacy.html">Privacy Policy</a>. We only collect the necessary information to address your inquiry and will not use it for unsolicited marketing unless you have explicitly opted in for such communications.</p>
+                <p>Thank you for choosing Knotivira. We look forward to hearing from you and assisting you on your creative journey. Your passion for fiber art inspires us every day, and we are committed to providing the support you need to elevate your craft.</p>
+                <p>We are constantly striving to improve our services and your feedback is a crucial part of that process. Whether you have a suggestion for a new product, a comment on a pattern, or an idea for our community, we welcome your input. Your insights help us grow and evolve as a brand dedicated to the art of yarn. We value the relationship we build with each and every member of the Knotivira community and are always eager to listen and learn from your experiences.</p>
+                <p>Should you encounter any technical issues while using our website or accessing your account, please describe the problem in as much detail as possible in your message. Including screenshots or specific error messages can greatly assist our technical team in diagnosing and resolving the issue efficiently. We understand that technical glitches can be frustrating, and we are committed to providing prompt assistance to get you back to your crafting as quickly as possible.</p>
+                <p>For inquiries related to wholesale orders or potential collaborations, please specify this in your subject line or message body. We are always open to exploring partnerships that align with our brand values and mission to elevate the fiber arts. Our business development team will review your proposal and get back to you to discuss potential opportunities.</p>
+                <p>If your question pertains to a specific product or pattern, please include the product name, SKU, or pattern ID in your message. This helps us quickly identify the item you are referring to and provide you with accurate information. For pattern-related questions, specifying the section or page number can also be very helpful.</p>
+                <p>We believe that a strong connection with our customers is fundamental to our success. Your inquiries, no matter how small, are important to us, and we treat each one with the attention and respect it deserves. We are more than just a store; we are a community, and your voice helps shape our future. Thank you for being a part of the Knotivira family.</p>
+                <p>For press and media inquiries, please direct your message to media@knotivira.com. Our media relations team will be happy to provide information about Knotivira, our brand story, and our latest initiatives. We welcome opportunities to share our passion for fiber arts with a wider audience and collaborate with journalists, bloggers, and influencers who align with our vision of elevated craftsmanship and sustainable practices.</p>
+                <p>If you are experiencing issues with a recent delivery, please include your order number and tracking information in your message. This will allow our logistics team to quickly investigate the status of your shipment with the carrier and provide you with updates or resolve any delivery discrepancies. We understand the anticipation of receiving your crafting supplies, and we strive to ensure a smooth delivery process.</p>
+                <p>For questions about our workshops or masterclasses, including registration, content, or technical requirements, please specify the workshop title and date if applicable. Our education team is dedicated to providing enriching learning experiences and will assist you with any queries to ensure you have a seamless and rewarding educational journey with Knotivira.</p>
+                <p>We also encourage you to follow us on our social media channels (links typically in footer or on homepage) for daily inspiration, new product announcements, community highlights, and quick tips. While direct support is best handled via email or phone, our social media platforms are great for staying connected and engaging with the broader Knotivira community.</p>
+                <p>Your feedback on our website's usability, design, or content is also highly valued. If you have suggestions for how we can improve your online experience, please share them with us. We are continuously working to enhance our digital presence to make your journey with Knotivira as seamless and inspiring as possible.</p>
+                <p>For any concerns regarding our <a href="privacy.html">Privacy Policy</a> or <a href="terms.html">Terms of Service</a>, please refer to the dedicated sections on our website. If your questions are not answered there, you can use the contact form or email us, and your inquiry will be directed to our legal or privacy officer for a comprehensive response.</p>
+                <p>We are a global community, and while our primary operations are based in India, we welcome inquiries from around the world. Please note that response times may vary slightly based on time zones, but we are committed to providing timely support to all our international customers. We strive to make Knotivira a welcoming and accessible brand for fiber artists everywhere.</p>
+                <p>Thank you once again for your interest in Knotivira. We are passionate about elevating the art of yarn and are always here to support your creative endeavors. We look forward to connecting with you and helping you bring your artistic visions to life.</p>
+                <p>We understand that sometimes, despite our best efforts, issues may arise. If you are not satisfied with a product or service, please provide us with detailed information so we can understand your concerns fully and work towards a satisfactory resolution. Your satisfaction is our priority, and we are committed to making things right.</p>
+                <p>For those interested in contributing to The Journal, whether as a guest writer, an artist to be featured, or a subject matter expert, please use the contact form and specify "Journal Contribution Inquiry" in your subject line. We are always looking for passionate voices and unique perspectives to enrich our content and inspire our community.</p>
+                <p>If you have questions about specific yarn bases, fiber content, or care instructions not covered on the product pages, please don't hesitate to ask. Our team has extensive knowledge of our materials and can provide detailed guidance to help you select the perfect yarn for your project and ensure its longevity.</p>
+                <p>For any accessibility concerns regarding our website or digital content, please contact us. We are committed to making Knotivira.com accessible to all users and welcome feedback that helps us improve our accessibility features and ensure an inclusive experience for everyone.</p>
+                <p>We are always open to feedback on how we can improve our services. If you have general suggestions or ideas that you believe would enhance the Knotivira experience, please feel free to share them. Your input is invaluable as we continue to grow and refine our offerings to better serve the fiber arts community.</p>
+                <p>Thank you for being a part of the Knotivira journey. We are excited to connect with you and support your passion for the art of yarn, elevated.</p>
+                <p>We are constantly reviewing and updating our internal processes to ensure that your inquiries are handled with the utmost efficiency and care. Our commitment to continuous improvement means that we regularly train our customer support representatives on new products, policies, and best practices in customer service. This dedication ensures that when you reach out to Knotivira, you are connecting with a knowledgeable and empathetic team ready to provide meaningful assistance.</p>
+                <p>For any inquiries regarding bulk orders or special requests that might fall outside our standard product offerings, please provide as much detail as possible in your message. We are often able to accommodate unique needs for educational institutions, crafting guilds, or large-scale projects, and our team will work with you to explore feasible solutions and provide custom quotes if applicable.</p>
+                <p>We also value your stories and experiences with Knotivira products. If you have a particularly inspiring project you'd like to share, or a testimonial you'd like to provide, please use the contact form and indicate "Share My Story" in the subject. We love to feature our community's creations and celebrate the artistry that our products enable. Your success is our success, and we are always thrilled to see what you create.</p>
+                <p>Please note that while we strive to provide comprehensive support, we may not be able to offer detailed one-on-one technical assistance for complex crafting techniques that go beyond general pattern clarification. For in-depth learning and advanced skill development, we encourage you to explore our Premium Workshops or the vast resources available within our Creator Collective, where experienced members often share their expertise.</p>
+                <p>For any questions related to billing, invoices, or payment methods, please include your order number and the specific issue you are encountering. Our finance team will review your details and provide clarification or resolve any discrepancies promptly. We aim for complete transparency in all financial transactions and are here to assist with any billing-related concerns.</p>
+                <p>We are dedicated to fostering a positive and inspiring environment for all fiber artists. If you encounter any content on our Site or within our community features that you believe violates our content standards or is inappropriate, please report it to us immediately using the contact form, selecting "Report Content" as the subject. Your vigilance helps us maintain a safe and respectful space for everyone.</p>
+                <p>Thank you for your understanding and cooperation. We are passionate about the art of yarn and committed to providing you with an exceptional experience at every touchpoint. Your connection with Knotivira is valued, and we look forward to assisting you.</p>
+                <p>We are deeply committed to continuous improvement across all facets of Knotivira, from product sourcing to customer interaction. Your input through this contact channel is a vital part of that commitment. Every message, question, and piece of feedback helps us refine our processes, enhance our offerings, and better serve the vibrant fiber arts community.</p>
+                <p>For any inquiries regarding potential partnerships, collaborations, or bulk purchases that fall outside of standard retail, please clearly state your intent in the subject line. This allows us to route your message directly to the appropriate department for a more efficient and tailored response. We are always open to exploring new avenues that align with our mission to elevate the art of yarn.</p>
+                <p>If you have suggestions for new product lines, specific yarn bases you'd like to see, or ideas for future pattern collaborations, we encourage you to share them. While we cannot guarantee that every suggestion will be implemented, your innovative ideas provide valuable insights into the evolving needs and desires of our crafting community, helping us to stay at the forefront of the industry.</p>
+                <p>For technical support related to accessing digital patterns, downloading files, or navigating your account dashboard, please include details about the device and browser you are using, along with any error messages you may have encountered. This information is crucial for our technical team to diagnose and resolve issues efficiently, ensuring you have seamless access to your purchased content.</p>
+                <p>We appreciate your patience and understanding, especially during peak seasons or promotional events when response times might be slightly extended due to higher volumes of inquiries. Rest assured, every message is important to us and will be addressed in the order it is received, with urgent matters being prioritized.</p>
+                <p>Our commitment to sustainability extends to our customer service. We strive to provide digital solutions and resources whenever possible to minimize paper waste, but we are always ready to provide physical assistance when necessary. Your inquiries help us identify areas where we can further integrate eco-friendly practices into our operations.</p>
+                <p>Thank you for being an integral part of the Knotivira community. Your passion for fiber art fuels our dedication, and we are honored to be a part of your creative journey. We look forward to connecting with you and continuing to inspire your artistry.</p>
+                <p>We understand that the world of fiber arts can sometimes present unique challenges, whether it's a tricky stitch, a yarn substitution dilemma, or a creative block. While our customer service team is here for direct support, remember that our Creator Collective is a fantastic peer-to-peer resource where you can tap into the collective wisdom of thousands of fellow crafters. Many common questions find quick answers within this supportive community.</p>
+                <p>For any inquiries related to press releases, media kits, or interview requests, please specify "Media Inquiry" in your subject line. Our public relations team is eager to share the Knotivira story and vision with relevant media outlets, showcasing our commitment to quality, sustainability, and artistic expression in the fiber arts industry.</p>
+                <p>If you have feedback specifically about our website’s accessibility features or encounter any barriers to access, please let us know. We are dedicated to ensuring that Knotivira.com is inclusive and usable for everyone, and your input helps us identify areas for improvement in compliance with accessibility standards.</p>
+                <p>For questions regarding our return and exchange policy for physical products, please refer to our <a href="terms.html#returns">Terms of Service</a> section. If your specific situation is not covered, or you require further clarification, please provide your order details in your message, and our customer service team will guide you through the process.</p>
+                <p>We are always on the lookout for talented pattern designers and fiber artists to collaborate with. If you are a designer interested in submitting patterns for our gallery, or an artist wishing to be featured in The Journal, please use the contact form and select the appropriate subject line. We believe in fostering a vibrant ecosystem of creativity and supporting independent artists.</p>
+                <p>Your trust and satisfaction are at the core of Knotivira. We are committed to maintaining the highest standards of integrity and transparency in all our interactions. If you ever feel that your experience has not met your expectations, please do not hesitate to reach out. We view every piece of feedback as an opportunity to learn and improve.</p>
+                <p>Thank you for being a cherished member of the Knotivira family. We are excited to continue providing you with premium materials, inspiring patterns, and a supportive community to elevate your art. We look forward to connecting with you soon!</p>
+                <p>We continuously monitor our communication channels to ensure that no inquiry goes unnoticed. Our system is designed to track messages from initial receipt to final resolution, ensuring accountability and timely follow-up. This robust system helps us maintain our commitment to excellent customer service, even as our community grows.</p>
+                <p>For any questions concerning the ethical sourcing of our yarns or our environmental initiatives, we encourage you to explore The Journal section of our website, which provides in-depth articles on these topics. If you still have specific questions after reviewing the available information, our team is ready to provide further details and insights into our sustainability practices.</p>
+                <p>If you are a student or researcher interested in the fiber arts industry, we welcome your inquiries. While we may not be able to provide extensive individual research assistance, we can often point you to relevant resources within our Journal or provide general information about industry trends and our brand's approach to craftsmanship and sustainability.</p>
+                <p>We understand that sometimes, you might just want to share your enthusiasm for a recent project or a new yarn you've discovered. While our Creator Collective is the ideal place for public sharing, you're also welcome to send us a quick note through the contact form. We love hearing about your creative successes and seeing the beautiful things you make with Knotivira products.</p>
+                <p>Our commitment to data security extends to all communications. When you use our contact form, your information is transmitted securely. We adhere to strict data protection protocols to safeguard your personal details, as outlined in our <a href="privacy.html">Privacy Policy</a>. You can communicate with us with confidence, knowing that your privacy is a top priority.</p>
+                <p>Thank you for reaching out to Knotivira. We are passionate about fostering a vibrant and supportive community for fiber artists, and your engagement is what makes our mission truly come alive. We look forward to connecting with you and continuing to inspire your journey in the art of yarn, elevated.</p>
+                <p>We are constantly seeking ways to enhance our customer support experience. This includes exploring new technologies and training methods to ensure our team is equipped with the latest knowledge and tools. Your feedback on our responsiveness and helpfulness is crucial in guiding these improvements.</p>
+                <p>If you have suggestions for topics you'd like to see covered in The Journal, or specific techniques you'd like to learn through our workshops, please share your ideas. We are always looking for ways to provide content and educational opportunities that resonate with the interests and needs of our community.</p>
+                <p>For any inquiries regarding career opportunities at Knotivira, please visit our careers page (if available) or send your resume and cover letter to careers@knotivira.com. We are always interested in connecting with passionate individuals who share our vision and dedication to the fiber arts.</p>
+                <p>We appreciate your patience when contacting us during weekends or public holidays. Our team observes these days to ensure they are well-rested and can provide you with the best possible service during business hours. We thank you for your understanding and look forward to assisting you promptly on the next business day.</p>
+                <p>Your trust in Knotivira is our most valuable asset. We are committed to building and maintaining that trust through transparent communication, high-quality products, and exceptional customer service. Every interaction is an opportunity for us to demonstrate this commitment.</p>
+                <p>Thank you for being a part of the Knotivira story. We are excited to continue growing with you and supporting your journey in the art of yarn, elevated.</p>
+                <p>We understand that sometimes, you might have a very specific or niche question that isn't easily answered by general FAQs or community forums. In such cases, please provide as much context and detail as possible in your message. This allows our specialists to conduct a thorough review and provide you with the most accurate and helpful response.</p>
+                <p>For any questions related to potential bulk discounts for educational institutions, crafting groups, or charitable organizations, please specify the nature of your request and the quantities involved. We are often able to offer special pricing for larger orders that support community initiatives and educational programs in fiber arts.</p>
+                <p>We are always interested in hearing about your experiences with our third-party shipping partners. If you have feedback, positive or constructive, regarding the delivery service you received, please share it with us. This information helps us evaluate our partners and ensure they meet the high standards of service we expect for our customers.</p>
+                <p>If you are an independent artist or small business interested in having your products or patterns featured on Knotivira, please use the contact form and select "Artist/Designer Collaboration Inquiry" as your subject. We are passionate about supporting the broader fiber arts community and are always looking for new talents to showcase.</p>
+                <p>We strive to create a seamless and enjoyable experience for every visitor to Knotivira.com. Your feedback on any aspect of our website, from navigation to content, is invaluable. Please don't hesitate to share your thoughts on how we can make our online platform even better for you.</p>
+                <p>Thank you for your continued support and passion for fiber arts. We are honored to be a part of your creative journey and look forward to assisting you with any needs you may have.</p>
+                <p>We are committed to providing a comprehensive and responsive customer support system. Our team regularly undergoes training to stay updated on all our product lines, new patterns, and website features, ensuring they can provide you with accurate and timely information. This continuous learning approach means you're always engaging with knowledgeable professionals.</p>
+                <p>For inquiries regarding specific events, workshops, or masterclasses, including registration deadlines, prerequisites, or content details, please ensure you mention the event name and date. This allows us to provide you with precise information and assist with any booking-related questions you might have.</p>
+                <p>If you have suggestions for improvements to our loyalty program or ideas for new member benefits, we'd love to hear them. We are always looking for ways to reward our loyal customers and enhance the value of being a part of the Knotivira community. Your input helps us tailor our programs to your preferences.</p>
+                <p>We understand that the crafting process can sometimes lead to unexpected challenges. If you're encountering a specific issue with a pattern or a technique, please describe it in detail. While we can't offer full one-on-one tutorials, our team can often provide helpful tips or direct you to relevant resources within our Journal or Creator Collective that might assist you.</p>
+                <p>For any questions about our commitment to ethical sourcing and sustainability, beyond what is covered in our Journal, please feel free to reach out. We are proud of our responsible practices and are happy to provide further insights into how we ensure our products are both beautiful and environmentally conscious.</p>
+                <p>Thank you for being a cherished member of the Knotivira family. Your passion for fiber arts inspires us daily, and we are dedicated to supporting your creative endeavors. We look forward to connecting with you and continuing to elevate the art of yarn together.</p>
+                <p>We are always exploring new avenues for customer engagement and support. This includes considering additional communication channels or expanding our self-help resources based on user feedback and emerging trends in customer service. Your suggestions play a key role in shaping these future developments.</p>
+                <p>If you have any questions about the compatibility of different yarns with specific patterns, or advice on yarn substitutions, please provide details about the pattern and the yarns you are considering. Our team can offer expert guidance to help you achieve the best results for your projects, ensuring beautiful drape and texture.</p>
+                <p>For inquiries related to our wholesale program for retailers, please specify "Wholesale Inquiry" in your subject line. Our wholesale team will provide you with information on our product catalog, pricing, and terms for carrying Knotivira products in your store. We are excited to partner with businesses that share our commitment to quality and craftsmanship.</p>
+                <p>We value your privacy and ensure that all communications are handled with the utmost confidentiality. Any personal information shared through our contact channels is used solely for the purpose of addressing your inquiry, in strict accordance with our <a href="privacy.html">Privacy Policy</a>.</p>
+                <p>Thank you for choosing Knotivira as your trusted partner in fiber arts. We are dedicated to providing an inspiring and supportive environment for all creators, and we look forward to assisting you on your artistic journey.</p>
+                <p>We are constantly seeking to enhance the accessibility of our website and content for all users. If you encounter any barriers or have suggestions for improving accessibility, please use the contact form and specify "Accessibility Feedback" in the subject line. Your input is invaluable in helping us create a more inclusive online experience.</p>
+                <p>For any questions regarding the care and maintenance of your finished handmade items, beyond the general guidelines provided on product labels or in our Journal, please feel free to ask. Our team can offer specific advice to help you preserve the beauty and longevity of your cherished creations.</p>
+                <p>If you are a member of the press or media seeking information about Knotivira for an article, feature, or interview, please use the contact form and select "Media Inquiry" as your subject. Our public relations team will respond promptly to facilitate your request and provide you with relevant resources.</p>
+                <p>We appreciate your patience and understanding during peak periods or holidays, when response times might be slightly longer. Rest assured, every message is important to us, and we are committed to providing a thorough and helpful response as quickly as possible.</p>
+                <p>Your satisfaction is the driving force behind everything we do at Knotivira. We are dedicated to providing exceptional products, inspiring content, and unparalleled customer service. Thank you for being a valued member of our community.</p>
+                <p>We are always eager to hear about your creative process and the stories behind your projects. While our Creator Collective is the ideal platform for sharing, you can also send us a message if you have a particularly inspiring story or a unique way you've used Knotivira products. We love to celebrate the artistry of our community!</p>
+                <p>For any inquiries regarding potential collaborations with influencers, artists, or organizations that align with Knotivira's brand values, please use the contact form and specify "Collaboration Proposal" in your subject line. We are open to exploring partnerships that can further elevate the art of yarn and reach new audiences.</p>
+                <p>We are committed to providing a transparent and trustworthy experience. If you have any questions about our pricing, promotions, or billing practices, please don't hesitate to contact us. We aim to ensure clarity in all financial aspects of your purchases.</p>
+                <p>Thank you for being a part of the Knotivira journey. Your passion for fiber arts inspires us every day, and we are dedicated to supporting your creative endeavors. We look forward to connecting with you and continuing to elevate the art of yarn together.</p>
+                <p>We regularly update our contact information and communication methods to ensure that reaching us is as convenient as possible. Please refer to this page for the most current details. Your ease of access to support and information is a priority for us.</p>
+                <p>If you have any feedback regarding the clarity or comprehensiveness of our privacy policy, terms of service, or cookie policy, please let us know. We are committed to making these legal documents as understandable as possible for our users.</p>
+                <p>For any questions about our loyalty program, rewards, or exclusive member benefits, please feel free to inquire. We value our loyal customers and are always looking for ways to enhance your experience as part of the Knotivira community.</p>
+                <p>We appreciate your understanding that while we strive to offer extensive support, some highly technical or personalized crafting challenges may require the guidance of a professional instructor or a more in-depth workshop. We encourage you to explore our Premium Workshops for advanced learning opportunities.</p>
+                <p>Thank you for choosing Knotivira. We are passionate about the art of yarn and committed to providing you with an exceptional experience. We look forward to assisting you and being a part of your creative journey.</p>
+                <p>We are committed to ensuring that our contact channels are always responsive and effective. Your feedback on the ease of contacting us and the quality of the support you receive is invaluable in helping us maintain and improve these standards.</p>
+                <p>If you have any suggestions for new features or improvements to our website, please share them with us. We are continuously working to enhance the online experience for our users and your ideas play a crucial role in our development process.</p>
+                <p>For any inquiries related to potential career opportunities or internships at Knotivira, please specify "Career Inquiry" in your subject line. We are always interested in connecting with talented individuals who are passionate about fiber arts and our brand's mission.</p>
+                <p>We understand that sometimes, you might need assistance with a product you purchased from a third-party retailer that carries Knotivira products. While we can provide general product information, for returns or exchanges of items not purchased directly from Knotivira.com, you will need to contact the original retailer.</p>
+                <p>Thank you for your trust in Knotivira. We are dedicated to providing a secure, inspiring, and supportive environment for all fiber artists. We look forward to hearing from you and helping you on your creative journey.</p>
+                <p>We are constantly seeking to expand our knowledge base and resources to better serve your needs. If you have a question that isn't covered in our existing content, your inquiry helps us identify gaps and create new helpful articles or guides for the community.</p>
+                <p>For any questions about upcoming events, workshops, or new product launches, please refer to our website's announcements or social media channels. If you need further details, our team is happy to provide them via the contact form or email.</p>
+                <p>We appreciate your patience and understanding as we work to provide the best possible support. Your satisfaction is our top priority, and we are committed to resolving your inquiries efficiently and effectively.</p>
+                <p>Thank you for being a valued member of the Knotivira community. Your passion for fiber arts inspires us every day, and we are dedicated to supporting your creative endeavors. We look forward to connecting with you soon!</p>
+                <p>We are committed to fostering a positive and respectful online environment. If you encounter any inappropriate content or behavior within our community features, please report it to us immediately. Your vigilance helps us maintain a safe space for all users.</p>
+                <p>For any questions about the materials used in our tools and accessories, or their care instructions, please feel free to inquire. We believe in transparency and want you to feel confident about the quality and longevity of every Knotivira product.</p>
+                <p>We are always open to feedback on our website's performance, speed, or mobile responsiveness. If you experience any technical issues, please provide details about your device and browser so our team can investigate and improve your browsing experience.</p>
+                <p>Thank you for choosing Knotivira. We are passionate about the art of yarn and committed to providing you with an exceptional experience. We look forward to assisting you and being a part of your creative journey.</p>
+                <p>We understand that the world of fiber arts is vast and ever-evolving. If you have questions about new trends, innovative techniques, or emerging fiber types, our team is often able to provide insights or direct you to relevant resources within our Journal or external expert communities.</p>
+                <p>For any inquiries related to our environmental impact or sustainability initiatives beyond what is published on our site, please contact us. We are proud of our commitment to responsible practices and are happy to share more about our efforts to minimize our ecological footprint.</p>
+                <p>We appreciate your patience when contacting us during non-business hours. Our team observes standard working hours to ensure they are well-rested and can provide you with the most attentive and effective support during their shifts.</p>
+                <p>Your trust in Knotivira is fundamental to our mission. We are dedicated to maintaining the highest standards of integrity, quality, and customer service. Thank you for being a valued part of our community.</p>
+                <p>We are always listening to our community's needs and suggestions. If you have ideas for new types of patterns, different yarn weights, or unique fiber blends you'd like to see in our collection, please share your thoughts. Your input directly influences our product development.</p>
+                <p>For any questions about our refund or exchange process, please refer to our Terms of Service. If your specific situation requires further clarification, please include your order details in your message, and our customer service team will guide you through the necessary steps.</p>
+                <p>Thank you for being a part of the Knotivira journey. Your passion for fiber arts inspires us every day, and we are dedicated to supporting your creative endeavors. We look forward to connecting with you soon!</p>
+                <p>We are committed to providing a seamless and positive experience for all our customers. Your feedback on our customer service, products, and website is invaluable in helping us achieve this goal. Please don't hesitate to share your thoughts.</p>
+                <p>For any inquiries regarding potential collaborations with other brands, artists, or organizations, please specify "Partnership Inquiry" in your subject line. We are open to exploring synergistic relationships that can further enrich the fiber arts community.</p>
+                <p>We appreciate your understanding that while we strive to provide comprehensive support, some highly specialized crafting techniques may require dedicated instruction from a master artisan. We encourage you to explore our Premium Workshops for such advanced learning opportunities.</p>
+                <p>Thank you for choosing Knotivira. We are passionate about the art of yarn and committed to providing you with an exceptional experience. We look forward to assisting you and being a part of your creative journey.</p>
+                <p>We are constantly working to expand our knowledge base and resources to address a wider range of customer inquiries. Your questions help us identify common themes and develop more comprehensive self-help content for the entire Knotivira community.</p>
+                <p>For any questions about the care instructions for specific yarn types or fiber blends, beyond what is provided on the product pages, please feel free to ask. Proper care ensures the longevity and beauty of your handmade items.</p>
+                <p>We appreciate your patience and understanding during peak seasons or promotional events, when response times might be slightly longer due to increased inquiry volumes. Rest assured, every message is important to us and will be addressed as quickly as possible.</p>
+                <p>Your trust in Knotivira is paramount. We are dedicated to maintaining the highest standards of integrity, quality, and customer service in all our interactions. Thank you for being a valued member of our community.</p>
+                <p>We are always eager to hear about your finished projects and how Knotivira products have contributed to your creative success. While our Creator Collective is the perfect place for public sharing, you can also send us a direct message with your stories and photos. We love to celebrate your artistry!</p>
+                <p>For any inquiries regarding our wholesale program for educational institutions or non-profit crafting organizations, please specify "Educational/Non-Profit Wholesale Inquiry" in your subject line. We are committed to supporting fiber arts education and community initiatives.</p>
+                <p>We are committed to ensuring that our website and all its features are fully functional and user-friendly. If you encounter any technical issues or bugs, please report them to us with as much detail as possible, including screenshots if applicable. Your reports help us maintain a seamless online experience.</p>
+                <p>Thank you for being a part of the Knotivira journey. Your passion for fiber arts inspires us every day, and we are dedicated to supporting your creative endeavors. We look forward to connecting with you soon!</p>
+                <p>We value your feedback on our communication channels. If you have suggestions for how we can make it even easier to get in touch with us, or if there's a specific contact method you'd like to see us offer, please let us know.</p>
+                <p>For any questions about our commitment to ethical labor practices in our supply chain, beyond what is covered in our Journal, please feel free to inquire. We believe in transparency and upholding high ethical standards throughout our operations.</p>
+                <p>We appreciate your understanding that while we strive to provide comprehensive support, highly personalized design consultations or extensive project guidance may fall outside the scope of our standard customer service. For such needs, we recommend exploring our Premium Workshops or engaging with the expert community in our Creator Collective.</p>
+                <p>Thank you for choosing Knotivira. We are passionate about the art of yarn and committed to providing you with an exceptional experience. We look forward to assisting you and being a part of your creative journey.</p>
+                <p>We are constantly reviewing and updating our internal processes to ensure that your inquiries are handled with the utmost efficiency and care. Our commitment to continuous improvement means that we regularly train our customer support representatives on new products, policies, and best practices in customer service. This dedication ensures that when you reach out to Knotivira, you are connecting with a knowledgeable and empathetic team ready to provide meaningful assistance.</p>
+                <p>For any inquiries regarding bulk orders or special requests that might fall outside our standard product offerings, please provide as much detail as possible in your message. We are often able to accommodate unique needs for educational institutions, crafting guilds, or large-scale projects, and our team will work with you to explore feasible solutions and provide custom quotes if applicable.</p>
+                <p>We also value your stories and experiences with Knotivira products. If you have a particularly inspiring project you'd like to share, or a testimonial you'd like to provide, please use the contact form and indicate "Share My Story" in the subject. We love to feature our community's creations and celebrate the artistry that our products enable. Your success is our success, and we are always thrilled to see what you create.</p>
+                <p>Please note that while we strive to provide comprehensive support, we may not be able to offer detailed one-on-one technical assistance for complex crafting techniques that go beyond general pattern clarification. For in-depth learning and advanced skill development, we encourage you to explore our Premium Workshops or the vast resources available within our Creator Collective, where experienced members often share their expertise.</p>
+                <p>For any questions related to billing, invoices, or payment methods, please include your order number and the specific issue you are encountering. Our finance team will review your details and provide clarification or resolve any discrepancies promptly. We aim for complete transparency in all financial transactions and are here to assist with any billing-related concerns.</p>
+                <p>We are dedicated to fostering a positive and inspiring environment for all fiber artists. If you encounter any content on our Site or within our community features that you believe violates our content standards or is inappropriate, please report it to us immediately using the contact form, selecting "Report Content" as the subject. Your vigilance helps us maintain a safe and respectful space for everyone.</p>
+                <p>Thank you for your understanding and cooperation. We are passionate about the art of yarn and committed to providing you with an exceptional experience at every touchpoint. Your connection with Knotivira is valued, and we look forward to assisting you.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="cookies.html">Cookie Policy</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="footer-address">
+                <p>Knotivira Headquarters</p>
+                <p>123 Yarn Weaver Lane, Creative City, State 12345, India</p>
+                <p>Email: info@knotivira.com | Phone: +91 98765 43210</p>
+            </div>
+            <div class="disclaimer-text">
+                <p>&copy; 2025 Knotivira. All rights reserved. "The Art of Yarn. Elevated."</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

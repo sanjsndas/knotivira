@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knotivira — The Art of Yarn. Elevated.</title>
+    <style>
+        /* General Styles - Lighter Theme */
+        body {
+            font-family: 'Montserrat', sans-serif; /* A more modern, elegant font */
+            margin: 0;
+            padding: 0;
+            color: #333; /* Softer dark text */
+            background-color: #F8F8F8; /* Light gray for background */
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: #FFFFFF; /* Pure white */
+            padding: 15px 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08); /* Lighter shadow */
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif; /* Elegant font for logo */
+            font-size: 2.2em;
+            font-weight: bold;
+            color: #7A9B76; /* Softer Green */
+            text-decoration: none;
+            flex-shrink: 0;
+            margin-right: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #555; /* Slightly lighter text for nav */
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #CEB1A1; /* Softer Rose Gold */
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #EFEFEF; /* Very light gray */
+            text-align: center;
+            padding: 100px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://via.placeholder.com/1600x600/EFEFEF/7A9B76?text=Elegant+Yarn+Craft') no-repeat center center/cover; /* Lighter placeholder */
+            opacity: 0.7;
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            color: #333;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4em;
+            margin-bottom: 15px;
+            color: #7A9B76; /* Softer Green */
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            color: #555;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons a {
+            display: inline-block;
+            background-color: #7A9B76; /* Softer Green */
+            color: #fff;
+            padding: 12px 28px;
+            border-radius: 4px;
+            text-decoration: none;
+            margin: 8px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .cta-buttons a:hover {
+            background-color: #CEB1A1; /* Softer Rose Gold */
+            transform: translateY(-2px);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 80px 0;
+            background-color: #F8F8F8; /* Light gray */
+        }
+
+        section:nth-of-type(even) {
+            background-color: #FFFFFF; /* Pure white */
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3em;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #7A9B76; /* Softer Green */
+        }
+
+        h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2em;
+            color: #CEB1A1; /* Softer Rose Gold */
+            margin-top: 30px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .text-block {
+            margin-bottom: 20px;
+            line-height: 1.7;
+            font-size: 1.05em;
+            color: #444;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center; /* Center short paragraphs */
+        }
+
+        .text-block p {
+            margin-bottom: 15px;
+        }
+
+        /* Services / Key Sections - with images */
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .service-item {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            overflow: hidden;
+            text-align: center;
+            padding-bottom: 25px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+
+        .service-item img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-bottom: 1px solid #eee;
+        }
+
+        .service-item h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8em;
+            color: #7A9B76;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        .service-item p {
+            padding: 0 25px;
+            font-size: 1em;
+            color: #666;
+        }
+
+        /* Interactive Features */
+        .interactive-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .feature-box {
+            background-color: #FFFFFF;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .feature-box:hover {
+            background-color: #FDFDFD;
+            transform: translateY(-5px);
+        }
+
+        .feature-box h3 {
+            font-family: 'Playfair Display', serif;
+            color: #CEB1A1;
+            margin-top: 0;
+            font-size: 1.6em;
+        }
+
+        .feature-box p {
+            color: #666;
+            font-size: 0.98em;
+        }
+
+        /* Customer Satisfaction */
+        .satisfaction-item {
+            background-color: #FFFFFF;
+            padding: 35px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+            margin-bottom: 25px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .satisfaction-item p {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            line-height: 1.7;
+        }
+
+        .satisfaction-item .customer-name {
+            font-weight: bold;
+            color: #7A9B76;
+            font-size: 1em;
+            display: block;
+            margin-top: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #4A4A4A; /* Darker Gray */
+            color: #E0E0E0; /* Lighter text for footer */
+            padding: 50px 0;
+            text-align: center;
+            font-size: 0.85em;
+        }
+
+        footer .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        footer nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 25px 0;
+        }
+
+        footer nav ul li {
+            margin: 0 18px;
+        }
+
+        footer nav ul li a {
+            color: #E0E0E0;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer nav ul li a:hover {
+            color: #CEB1A1; /* Softer Rose Gold */
+        }
+
+        .footer-address {
+            margin-top: 25px;
+            margin-bottom: 30px;
+            line-height: 1.8;
+            color: #C0C0C0;
+        }
+
+        .disclaimer-text {
+            max-width: 900px;
+            margin: 0 auto 30px auto;
+            font-size: 0.8em;
+            line-height: 1.6;
+            color: #A0A0A0;
+            text-align: left;
+            padding: 20px;
+            background-color: #555; /* Slightly lighter background for disclaimer */
+            border-radius: 5px;
+        }
+
+        .disclaimer-text h3 {
+            color: #CEB1A1; /* Softer Rose Gold */
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        .disclaimer-text p {
+            margin-bottom: 1em;
+        }
+
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul {
+                margin-top: 15px;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 8px 0;
+            }
+
+            .hero h1 {
+                font-size: 2.8em;
+            }
+
+            .hero p {
+                font-size: 1.2em;
+            }
+
+            .cta-buttons a {
+                display: block;
+                margin: 10px auto;
+                max-width: 280px;
+            }
+
+            h2 {
+                font-size: 2.5em;
+            }
+
+            h3 {
+                font-size: 1.6em;
+            }
+
+            .service-grid, .interactive-features {
+                grid-template-columns: 1fr;
+            }
+
+            .service-item img {
+                height: 220px;
+            }
+
+            .disclaimer-text {
+                padding: 15px;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">Knotivira</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>The Art of Yarn. Elevated.</h1>
+                <p>Knotivira blends **fine craftsmanship, artistic expression, and premium materials** into one modern fiber arts brand. Where yarn becomes wearable art.</p>
+                <div class="cta-buttons">
+                    <a href="#yarn-atelier">Shop Premium Yarns</a>
+                    <a href="#pattern-gallery">Explore Artistic Patterns</a>
+                    <a href="#creator-collective">Join the Creator Collective</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about-us">
+            <div class="container">
+                <h2>About Knotivira</h2>
+                <div class="text-block">
+                    <p>At Knotivira, we believe fiber art is a profound act of creation. Our brand is for the discerning artist who seeks **inspiration, quality, and community**. We’ve meticulously curated an experience where every skein, every pattern, and every tool reflects our values of elegance, sustainability, and artistic integrity. Discover how the rich heritage of fiber arts is reinterpreted through a modern lens, offering you deeply rewarding projects.</p>
+                    <p>We source our yarns from producers prioritizing **ethical practices, animal welfare, and environmental sustainability**. Our collection features **Merino wool, Alpaca, Organic Cotton, and Silk blends**, each chosen for its unique characteristics and luxurious feel. Every yarn contributes to a beautiful, responsible creation. This commitment ensures your materials are exceptional and align with conscious crafting.</p>
+                    <p>The **Knotivira Pattern Gallery** showcases exclusive designer collaborations. Our patterns offer modern interpretations of traditional techniques, featuring fashion-forward garments, sophisticated home decor, and unique accessories. Each pattern includes **clear, illustrated, step-by-step guides** to ensure a smooth and enjoyable crafting journey. We inspire you to push creative boundaries and tell your own story through stitches.</p>
+                    <p>Equip yourself with the finest **artisan tools**. Our selection of ergonomic crochet hooks, knitting needles, and luxury project bags enhances your comfort and efficiency. We also offer specialized care products to preserve your handmade items. The right tools truly elevate your craft, allowing you to focus on the joy of creating.</p>
+                    <p>The **Creator Collective** is our vibrant community space for showcasing projects, connecting with fellow fiber artists, and gaining inspiration. It's a supportive environment to share your process, celebrate successes, and learn from diverse talents. Join our global network of passionate creators.</p>
+                    <p>**The Journal — Craft & Culture** offers deep dives into fiber history, techniques, and sustainability. Explore interviews with designers, guides on eco-friendly choices, and insights into the cultural significance of fiber arts. It's a continuous source of knowledge to enrich your understanding and appreciation.</p>
+                    <p>Our unique **interactive features** like the Yarn Pairing Tool, Skill Progress Tracker, Community Gallery, and Premium Workshops are designed to enhance your crafting journey. These tools simplify choices, track your growth, celebrate your achievements, and offer expert-led learning opportunities, making Knotivira a comprehensive destination for elevated fiber art.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="yarn-atelier">
+            <div class="container">
+                <h2>The Yarn Atelier</h2>
+                <div class="service-grid">
+                    <div class="service-item">
+                        <img src="p1.avif" alt="Merino Wool Yarn">
+                        <h3>Natural & Luxury Fibers</h3>
+                        <p>Discover ethically sourced Alpaca, super-soft Merino, organic cotton, and lustrous silk blends. Each yarn is chosen for its superior quality, luxurious feel, and responsible production, perfect for your next masterpiece.</p>
+                    </div>
+                    <div class="service-item">
+                        <img src="p2.avif" alt="Hand-Dyed Yarn Collection">
+                        <h3>Hand-Dyed & Eco-Friendly</h3>
+                        <p>Explore unique hand-dyed collections created with low-impact dyes and water-saving techniques. Our eco-friendly approach ensures vibrant, one-of-a-kind skeins that respect the planet and inspire creativity.</p>
+                    </div>
+                    <div class="service-item">
+                        <img src="p3.avif" alt="Curated Color Palettes">
+                        <h3>Curated Color Palettes</h3>
+                        <p>Simplify your color choices with our expertly curated palettes. Designed for perfect harmony, these collections ensure your projects are cohesive and visually stunning, reflecting true artistic vision.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pattern-gallery">
+            <div class="container">
+                <h2>Knotivira Pattern Gallery</h2>
+                <div class="service-grid">
+                    <div class="service-item">
+                        <img src="p4.avif" alt="Elegant Garment Pattern">
+                        <h3>Exclusive Designer Patterns</h3>
+                        <p>Unlock your creativity with unique, fashion-forward patterns. Collaborations with independent designers bring you sophisticated garments and accessories not found anywhere else.</p>
+                    </div>
+                    <div class="service-item">
+                        <img src="p5.webp" alt="Home Decor Pattern">
+                        <h3>Fashion & Home Decor</h3>
+                        <p>From chic sweaters to intricate throws, our gallery offers designs that blend modern aesthetics with timeless craftsmanship, elevating both your wardrobe and living space.</p>
+                    </div>
+                    <div class="service-item">
+                        <img src="p6.avif" alt="Illustrated Step-by-Step Guides">
+                        <h3>Illustrated Guides</h3>
+                        <p>Each pattern includes clear, step-by-step illustrations and detailed instructions. Tackle new techniques with confidence and bring your vision to life seamlessly.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tools-craft">
+            <div class="container">
+                <h2>Tools of the Craft</h2>
+                <div class="service-grid">
+                    <div class="service-item">
+                        <img src="p7.webp" alt="Artisan Knitting Needles">
+                        <h3>Artisan Hooks & Needles</h3>
+                        <p>Equip yourself with premium crochet hooks and knitting needles crafted from sustainable materials. Designed for ergonomic comfort and smooth performance, making every stitch a joy.</p>
+                    </div>
+                    <div class="service-item">
+                        <img src="p8.avif" alt="Luxury Project Bag">
+                        <h3>Luxury Project Bags & Accessories</h3>
+                        <p>Organize your work in style with our elegant project bags and essential accessories. Keep your creations safe and your tools handy, always ready for your next moment of inspiration.</p>
+                    </div>
+                    <div class="service-item">
+                        <img src="p9.webp" alt="Yarn Care Products">
+                        <h3>Care Products for Handmade Items</h3>
+                        <p>Preserve the beauty and longevity of your handmade treasures. Our gentle, specialized care products ensure your finished garments remain soft, vibrant, and cherished for years.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="interactive-features">
+            <div class="container">
+                <h2>Elevate Your Experience</h2>
+                <div class="interactive-features">
+                    <div class="feature-box">
+                        <h3>Yarn Pairing Tool</h3>
+                        <p>Visually match yarns to patterns for confident choices.</p>
+                    </div>
+                    <div class="feature-box">
+                        <h3>Skill Progress Tracker</h3>
+                        <p>Log projects and celebrate your crafting journey.</p>
+                    </div>
+                    <div class="feature-box">
+                        <h3>Community Gallery</h3>
+                        <p>Share your creations, inspire and be inspired globally.</p>
+                    </div>
+                    <div class="feature-box">
+                        <h3>Premium Workshops</h3>
+                        <p>Learn advanced techniques from designer-led masterclasses.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="why-different">
+            <div class="container">
+                <h2>Why Knotivira Stands Apart</h2>
+                <div class="text-block">
+                    <p>Knotivira offers an **elevated, design-forward fiber arts experience**, not just a craft store. We provide **curated, sustainable yarns** for conscious makers and **sophisticated patterns** inspired by fashion and nature.</p>
+                    <p>Our brand fosters a **community built on artistry and connection**. We are **less casual, more boutique** – dedicated to serious creators who appreciate fine craftsmanship and seek to transform yarn into wearable art. Discover the difference of true quality and inspired design.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="customer-satisfaction">
+            <div class="container">
+                <h2>What Our Customers Say</h2>
+                <div class="satisfaction-item">
+                    <p>"Knotivira has truly elevated my crafting. The yarns are luxurious, and the patterns are so inspiring and unique. It's my creative sanctuary!"</p>
+                    <p class="customer-name">— Anya S.</p>
+                </div>
+                <div class="satisfaction-item">
+                    <p>"I deeply appreciate the focus on sustainability. Crafting with ethically sourced materials from Knotivira aligns perfectly with my values."</p>
+                    <p class="customer-name">— Rohan K.</p>
+                </div>
+                <div class="satisfaction-item">
+                    <p>"The Creator Collective is amazing! I've connected with so many talented artists and found endless inspiration for my projects."</p>
+                    <p class="customer-name">— Priya L.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="cookies.html">Cookie Policy</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="footer-address">
+                <p>Knotivira Headquarters</p>
+                <p>123 Yarn Weaver Lane, Creative City, State 12345, India</p>
+                <p>Email: info@knotivira.com | Phone: +91 98765 43210</p>
+            </div>
+            <div class="disclaimer-text">
+                <h3>Disclaimer</h3>
+                <p>Welcome to Knotivira.com (the "Website"). Please read this disclaimer carefully. By using our Website, you agree to these terms.</p>
+                <p><strong>Accuracy of Information:</strong> While we strive for accuracy in product descriptions, colors may vary due to monitor settings. We do not guarantee completeness or reliability of all information. Contact us for precise color matching.</p>
+                <p><strong>Product Availability:</strong> All products are subject to availability. Knotivira reserves the right to limit quantities or discontinue products without notice. We will notify you if an item is out of stock and offer alternatives or a refund.</p>
+                <p><strong>Pattern Usage and Intellectual Property:</strong> All patterns are copyrighted by Knotivira and are for personal, non-commercial use only. Reproduction or distribution without permission is prohibited. Finished items made from our patterns may be sold on a small, handmade basis with credit to "Knotivira". All Website content is protected by international copyright laws.</p>
+                <p><strong>Third-Party Links:</strong> Our Website may contain links to third-party sites not controlled by Knotivira. We are not responsible for their content or policies. Review their terms before use. Links do not imply endorsement.</p>
+                <p><strong>Limitation of Liability:</strong> Knotivira, its directors, and affiliates are not liable for any direct, indirect, incidental, or consequential damages arising from your use or inability to use the Website, any third-party content, or unauthorized access to your data, regardless of legal theory.</p>
+                <p><strong>Changes to Disclaimer:</strong> Knotivira may update this disclaimer at any time. Your continued use of the Website after changes signifies your acceptance. Please review periodically.</p>
+                <p><strong>Governing Law:</strong> This disclaimer is governed by the laws of India. Any disputes will be subject to the exclusive jurisdiction of courts in Delhi, India.</p>
+                <p>By using Knotivira.com, you accept this disclaimer. If you disagree, please do not use our Website. We are dedicated to providing a high-quality, ethical, and inspiring experience. Thank you for choosing Knotivira.</p>
+            </div>
+            <p>&copy; 2025 Knotivira. All rights reserved. "The Art of Yarn. Elevated."</p>
+        </div>
+    </footer>
+</body>
+</html>
